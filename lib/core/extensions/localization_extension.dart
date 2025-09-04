@@ -64,7 +64,7 @@ extension LocalizationExtension on BuildContext {
   String get brideZone => localizations.brideZone;
   String get babyhub => localizations.babyhub;
   String get womensBazar => localizations.womensBazar;
-  String get herSouq => localizations.herSouq;
+  String get herSouq => localizations.addsHub;
   String get womenEmpowerment => localizations.womenEmpowerment;
   String get subscribtionBox => localizations.subscribtionBox;
   String get blog => localizations.blog;

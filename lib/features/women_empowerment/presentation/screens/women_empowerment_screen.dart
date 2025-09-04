@@ -39,7 +39,7 @@ class WomenEmpowermentScreen extends StatelessWidget {
 
   List<CoachData> _getCoachesData(BuildContext context) {
     return List.generate(
-      2,
+      1,
       (index) => CoachData(
         name: 'Coach ${index + 1}',
         specialization:
@@ -54,7 +54,7 @@ class WomenEmpowermentScreen extends StatelessWidget {
 
   List<EventData> _getEventData() {
     return List.generate(
-      2,
+      1,
       (index) => EventData(
         title: 'Modern Woman Leadership Skills',
         discription: '3 hours | June 15, 2024',
@@ -110,7 +110,7 @@ class WomenEmpowermentScreen extends StatelessWidget {
 
   List<EventData> _getWorkshopData() {
     return List.generate(
-      3,
+      1,
       (index) => EventData(
         title: 'Leadership Workshop ${index + 1}',
         discription: '2 hours | July ${20 + index}, 2024',
@@ -122,7 +122,7 @@ class WomenEmpowermentScreen extends StatelessWidget {
 
   List<EventData> _getResourcesData() {
     return List.generate(
-      4,
+      1,
       (index) => EventData(
         title: 'Resource Guide ${index + 1}',
         discription: 'Self-paced | Available 24/7',
@@ -134,7 +134,7 @@ class WomenEmpowermentScreen extends StatelessWidget {
 
   List<EventData> _getNetworkingData() {
     return List.generate(
-      3,
+      1,
       (index) => EventData(
         title: 'Networking Event ${index + 1}',
         discription: '3 hours | August ${10 + index}, 2024',

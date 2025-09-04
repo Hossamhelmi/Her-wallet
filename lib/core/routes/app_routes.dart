@@ -16,8 +16,8 @@ import 'package:her_wallet/features/complete_subscription/presentation/screens/c
 import 'package:her_wallet/features/create_post/presentation/screens/create_post_screen.dart';
 import 'package:her_wallet/features/edit_profile/presentation/screens/edit_profile_screen.dart';
 import 'package:her_wallet/features/favourites/presentation/screens/favorites_screen.dart';
-import 'package:her_wallet/features/her_souq/presentation/screens/her_souq_screen.dart';
-import 'package:her_wallet/features/her_souq/presentation/cubit/her_souq_cubit.dart';
+import 'package:her_wallet/features/adds_hub/presentation/screens/adds_hub_screen.dart';
+import 'package:her_wallet/features/adds_hub/presentation/cubit/her_souq_cubit.dart';
 import 'package:her_wallet/features/home_layout/presentation/cubits/home_cubit.dart';
 import 'package:her_wallet/features/home_layout/presentation/screens/home_layout.dart';
 import 'package:her_wallet/features/member_management/presentation/screens/member_management_screen.dart';
@@ -25,6 +25,7 @@ import 'package:her_wallet/features/my_circle_details/presentation/screens/my_ci
 import 'package:her_wallet/features/my_orders/presentation/cubit/my_orders_cubit.dart';
 import 'package:her_wallet/features/my_orders/presentation/screens/my_orders_screen.dart';
 import 'package:her_wallet/features/new_circle/presentation/screens/new_circle_screen.dart';
+import 'package:her_wallet/features/notifications/notifications_screen.dart';
 import 'package:her_wallet/features/onboarding/onboarding_screen.dart';
 import 'package:her_wallet/features/order_confirmation/presentation/screens/order_confirmation_screen.dart';
 import 'package:her_wallet/features/order_details/presentation/screens/order_details.dart';
@@ -100,6 +101,7 @@ class AppRoutes {
   static const String blogDetails = '/blog-details';
   static const String savingGoals = '/saving-goals';
   static const String recentPayments = '/recent-payments';
+  static const String notifications = '/notifications';
 
   static Map<String, WidgetBuilder> get routes {
     return {
@@ -132,7 +134,7 @@ class AppRoutes {
       herSouq:
           (context) => BlocProvider(
             create: (context) => HerSouqCubit(),
-            child: const HerSouqScreen(),
+            child: const AddsHubScreen(),
           ),
       womenEmpowerment:
           (context) => BlocProvider(
@@ -178,6 +180,7 @@ class AppRoutes {
       blogDetails: (context) => const BlogDetailsScreen(),
       savingGoals: (context) => SavingGoalsScreen(),
       recentPayments: (context) => RecentPaymentsScreen(),
+      notifications: (context) => NotificationsScreen(),
 
       // Add more routes here
     };

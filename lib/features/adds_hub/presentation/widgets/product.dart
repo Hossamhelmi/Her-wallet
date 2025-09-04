@@ -25,7 +25,14 @@ class Product extends StatelessWidget {
       padding: const EdgeInsets.all(5.0),
       child: GestureDetector(
         onTap: () {
-          Navigator.pushNamed(context, AppRoutes.productDetails);
+          Navigator.pushNamed(context, AppRoutes.productDetails,
+          arguments: {
+            'imageUrl': imageUrl,
+            'title': title,
+            'price': price,
+            'date': date,
+            'category': category,
+          });
         },
         child: Container(
           height: 210.h,

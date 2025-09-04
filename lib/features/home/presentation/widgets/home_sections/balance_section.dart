@@ -37,7 +37,7 @@ class BalanceSection extends StatelessWidget {
             bottom: 8.h,
             top: 4.h,
           ),
-    
+
           decoration: BoxDecoration(
             color: AppColors.surface,
             borderRadius: BorderRadius.circular(20.r),
@@ -79,7 +79,8 @@ class BalanceSection extends StatelessWidget {
                         size: 24.w,
                       ),
                       onPressed: () {
-                        Navigator.pushNamed(context, AppRoutes.topUpBalance);
+                        Navigator.pushNamed(context, AppRoutes.topUpBalance,
+                            arguments: {"isSendMoney": false});
                       },
                       padding: EdgeInsets.zero,
                     ),
@@ -105,7 +106,9 @@ class BalanceSection extends StatelessWidget {
                     child: _buildActionButton(
                       icon: 'send_money.png',
                       label: context.localizations.sendMoney,
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.pushNamed(context, AppRoutes.topUpBalance,arguments: {"isSendMoney": true});
+                      },
                     ),
                   ),
                   SizedBox(width: 10.w),
@@ -113,7 +116,9 @@ class BalanceSection extends StatelessWidget {
                     child: _buildActionButton(
                       icon: 'pay_order.png',
                       label: context.localizations.payYourOrder,
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.pushNamed(context, AppRoutes.orderPayment);
+                      },
                     ),
                   ),
                 ],

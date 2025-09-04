@@ -11,7 +11,7 @@ class ExploreBoxesSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
-      children: [_buildSectionTitle(context), _buildBoxesList()],
+      children: [_buildSectionTitle(context), _buildBoxesList(context)],
     );
   }
 
@@ -29,21 +29,20 @@ class ExploreBoxesSection extends StatelessWidget {
     );
   }
 
-  Widget _buildBoxesList() {
+  Widget _buildBoxesList(BuildContext context) {
     return Padding(
       padding: EdgeInsets.only(left: 20.w, top: 8.h),
       child: SizedBox(
         height: 300.h,
-        child: ListView.builder(
+        child: ListView(
           physics: const BouncingScrollPhysics(),
           scrollDirection: Axis.horizontal,
-          itemCount: 3,
           shrinkWrap: true,
-          itemBuilder:
-              (context, index) => Padding(
-                padding: EdgeInsets.symmetric(horizontal: 6.w),
-                child: ExploreBoxCard(index: index),
-              ),
+         
+          children: [
+            ExploreBoxCard(index: 0, title: context.localizations.babyCare,imagePath: 'assets/images/box2.png'),
+            ExploreBoxCard(index: 1, title: context.localizations.skinCare,imagePath: 'assets/images/box3.png'),
+          ],
         ),
       ),
     );
@@ -52,32 +51,38 @@ class ExploreBoxesSection extends StatelessWidget {
 
 class ExploreBoxCard extends StatelessWidget {
   final int index;
+  final String imagePath;
+  final String title;
 
-  const ExploreBoxCard({super.key, required this.index});
+  const ExploreBoxCard({super.key, required this.index, required this.title, required this.imagePath});
+           
 
   @override
   Widget build(BuildContext context) {
-    return Material(
-      borderRadius: BorderRadius.circular(24.r),
-      color: AppColors.backgroundprimary,
-      elevation: 2,
-      shadowColor: Colors.black.withOpacity(0.1),
-      child: SizedBox(
-        width: 280.w,
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            _buildCoverImage(),
-            SizedBox(height: 12.h),
-            _buildBoxTitle( context),
-            SizedBox(height: 4.h),
-            _buildBoxDescription(),
-            SizedBox(height: 8.h),
-            _buildStartingFromText(context),
-            _buildPriceRow(context),
-            SizedBox(height: 5.h),
-            _buildActionButtons(context),
-          ],
+    return Padding(
+                padding: EdgeInsets.symmetric(horizontal: 6.w),
+      child: Material(
+        borderRadius: BorderRadius.circular(24.r),
+        color: AppColors.backgroundprimary,
+        elevation: 2,
+        shadowColor: Colors.black.withOpacity(0.1),
+        child: SizedBox(
+          width: 280.w,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              _buildCoverImage(),
+              SizedBox(height: 12.h),
+              _buildBoxTitle( context),
+              SizedBox(height: 4.h),
+              _buildBoxDescription(),
+              SizedBox(height: 8.h),
+              _buildStartingFromText(context),
+              _buildPriceRow(context),
+              SizedBox(height: 5.h),
+              _buildActionButtons(context),
+            ],
+          ),
         ),
       ),
     );
@@ -93,7 +98,7 @@ class ExploreBoxCard extends StatelessWidget {
           topRight: Radius.circular(24.r),
         ),
         child: Image.asset(
-          'assets/images/circle_cover1.jpg',
+          imagePath,
           fit: BoxFit.cover,
         ),
       ),
@@ -104,7 +109,7 @@ class ExploreBoxCard extends StatelessWidget {
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: 20.w),
       child: Text(
-        context.localizations.babyCare,
+        title,
         style: TextStyle(
           fontSize: 16.sp,
           height: 1.2,
@@ -182,7 +187,10 @@ class ExploreBoxCard extends StatelessWidget {
               height: 35.h,
               child: ElevatedButton(
                 onPressed: () {
-                  Navigator.pushNamed(context, AppRoutes.subscriptionDetails);
+                  Navigator.pushNamed(context, AppRoutes.subscriptionDetails,arguments: <String, dynamic>{
+                    'title': title,
+                    'imagePath': imagePath,
+                  });
                 },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: AppColors.mainColor,

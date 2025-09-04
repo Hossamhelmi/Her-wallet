@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CoverImageSection extends StatelessWidget {
-  const CoverImageSection({super.key});
+  final String coverImage;
+  const CoverImageSection({super.key, required this.coverImage});
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +16,7 @@ class CoverImageSection extends StatelessWidget {
           topRight: Radius.circular(24.r),
         ),
         child: Image.asset(
-          'assets/images/circle_cover1.jpg',
+          coverImage,
           fit: BoxFit.cover,
         ),
       ),

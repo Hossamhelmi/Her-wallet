@@ -22,12 +22,12 @@ class SubscriptionBoxesScreen extends StatelessWidget {
                 style: TextStyle(fontSize: 18.sp, fontWeight: FontWeight.bold),
               ),
             ),
-            const SubscriptionBoxCard(),
+            const SubscriptionBoxCard(coverImage: 'assets/images/box1.png',),
             SizedBox(height: 20.h),
-            const SubscriptionBoxCard(),
+            const SubscriptionBoxCard(coverImage: 'assets/images/box2.png',),
             SizedBox(height: 20.h),
-            const SubscriptionBoxCard(),
-            SizedBox(height: 32.h),
+            
+
           ],
         ),
       ),

@@ -3,7 +3,7 @@ import 'package:her_wallet/core/extensions/localization_extension.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:her_wallet/core/constants/app_colors.dart';
 import 'package:her_wallet/core/routes/app_routes.dart';
-import 'package:her_wallet/features/home/presentation/widgets/home_sections/title_and_view_all_section.dart';
+import 'package:her_wallet/features/web_view/web_view.dart';
 
 class BazarScreen extends StatelessWidget {
   const BazarScreen({super.key});
@@ -14,8 +14,20 @@ class BazarScreen extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
          
-          TitleViewAllSection(title: context.localizations.store),
-
+           Padding(
+             padding: EdgeInsets.symmetric(horizontal: 12.0.w, vertical: 5.h),
+             child: Text(
+                context.localizations.stores,
+                style: TextStyle(
+                  fontSize: 16.sp,
+                  fontWeight: FontWeight.bold,
+                  color: AppColors.textPrimary,
+                ),
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
+              ),
+           ),
+    
           SizedBox(
             height: 120.h,
             child: ListView.builder(
@@ -34,7 +46,7 @@ class BazarScreen extends StatelessWidget {
                           size: 30.sp,
                         ),
                       ),
-
+    
                       SizedBox(height: 10.h),
                       Text(
                         context.localizations.store,
@@ -47,77 +59,81 @@ class BazarScreen extends StatelessWidget {
                   ),
                 );
               },
-              itemCount: 8,
+              itemCount: 1,
               shrinkWrap: true,
               physics: BouncingScrollPhysics(
                 parent: AlwaysScrollableScrollPhysics(),
               ),
             ),
           ),
-          Padding(
-            padding: EdgeInsets.symmetric(horizontal: 24.w),
-            child: Stack(
-              children: [
-                Container(
-                  height: 170.h,
-                  decoration: BoxDecoration(
-                    color: AppColors.backgroundprimary,
-                    borderRadius: BorderRadius.circular(16.r),
-                  ),
-
-                  child: ClipRRect(
-                    borderRadius: BorderRadius.circular(16.r),
-                    child: Image.asset(
-                      'assets/images/woman-shopping.jpg',
-                      fit: BoxFit.cover,
-                      width: double.infinity,
-                    ),
-                  ),
-                ),
-                Positioned(
-                  bottom: 0,
-                  left: 0,
-                  right: 0,
-                  height: 80.h,
-                  child: Container(
+          GestureDetector(
+            onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => 
+            WebViewScreen(url: 'https://www.amazon.com/gp/goldbox?ref_=nav_cs_gb'))), // Navigate to WebViewScreen
+            child: Padding(
+              padding: EdgeInsets.symmetric(horizontal: 12.w),
+              child: Stack(
+                children: [
+                  Container(
+                    height: 170.h,
                     decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(24.r),
-                      gradient: LinearGradient(
-                        begin: Alignment.topCenter,
-                        end: Alignment.bottomCenter,
-                        colors: [
-                          Colors.transparent,
-                          Colors.black.withOpacity(0.8),
-                        ],
+                      color: AppColors.backgroundprimary,
+                      borderRadius: BorderRadius.circular(16.r),
+                    ),
+            
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(16.r),
+                      child: Image.asset(
+                        'assets/images/summer.jpg',
+                        fit: BoxFit.cover,
+                        width: double.infinity,
                       ),
                     ),
                   ),
-                ),
-                Positioned(
-                  bottom: 30.h,
-                  left: 20.w,
-                  child: Text(
-                    context.localizations.summerCollection,
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 24.sp,
-                      fontWeight: FontWeight.bold,
+                  Positioned(
+                    bottom: 0,
+                    left: 0,
+                    right: 0,
+                    height: 80.h,
+                    child: Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(12.r),
+                        gradient: LinearGradient(
+                          begin: Alignment.topCenter,
+                          end: Alignment.bottomCenter,
+                          colors: [
+                            Colors.transparent,
+                            Colors.black.withOpacity(0.8),
+                          ],
+                        ),
+                      ),
                     ),
                   ),
-                ),
-                Positioned(
-                  bottom: 10.h,
-                  left: 20.w,
-                  child: Text(
-                    context.localizations.saveUpTo40Off,
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 18.sp,
-                      fontWeight: FontWeight.bold,
+                  Positioned(
+                    bottom: 30.h,
+                    left: 20.w,
+                    child: Text(
+                      context.localizations.summerCollection,
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 24.sp,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
                   ),
-                ),
-              ],
+                  Positioned(
+                    bottom: 10.h,
+                    left: 20.w,
+                    child: Text(
+                      context.localizations.saveUpTo40Off,
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 18.sp,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
             ),
           ),
           Padding(
@@ -139,11 +155,15 @@ class BazarScreen extends StatelessWidget {
               spacing: 8.0,
               runSpacing: 8.0,
               children: List.generate(
-                4,
+                1,
                 (index) => GestureDetector(
                   onTap: () => Navigator.pushNamed(
                     context,
                     AppRoutes.productDetails,
+                    arguments: {
+                      'title': context.localizations.luxuryHandbag,
+                      'imageUrl': 'assets/images/bag.jpg',
+                    },
                   ),
                   child: Container(
                     width: MediaQuery.of(context).size.width * 0.42,

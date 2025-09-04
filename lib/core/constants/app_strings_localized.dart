@@ -126,7 +126,7 @@ class AppStrings {
   static String get womensBazar =>
       _getLocalized((context) => context.localizations.womensBazar);
   static String get herSouq =>
-      _getLocalized((context) => context.localizations.herSouq);
+      _getLocalized((context) => context.localizations.addsHub);
   static String get womenEmpowerment =>
       _getLocalized((context) => context.localizations.womenEmpowerment);
   static String get subscribtionBox =>

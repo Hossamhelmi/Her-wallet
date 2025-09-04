@@ -8,6 +8,7 @@ import 'package:her_wallet/core/shared/widgets/search_field.dart';
 import 'package:her_wallet/features/bride_zone/presentation/cubit/bride_zone_cubit.dart';
 import 'package:her_wallet/features/bride_zone/presentation/cubit/bride_zone_state.dart';
 import 'package:her_wallet/features/bride_zone/presentation/widgets/bride_zone_list_section.dart';
+import 'package:her_wallet/features/bride_zone/presentation/widgets/dress_srevice_card.dart';
 import 'package:her_wallet/features/bride_zone/presentation/widgets/service_card.dart';
 
 class BrideZoneScreen extends StatelessWidget {
@@ -19,7 +20,7 @@ class BrideZoneScreen extends StatelessWidget {
       context.localizations.makeupArtists,
       context.localizations.weddingPlanners,
       context.localizations.venues,
-      context.localizations.catering,
+      context.localizations.dresses,
     ];
   }
 
@@ -95,6 +96,7 @@ class BrideZoneScreen extends StatelessWidget {
                         specialization: 'Enthusiastic Photographer',
                         rating: '⭐⭐⭐⭐⭐ 4.8',
                       ),
+                      /*
                       ServiceCard(
                         name: 'Emily Johnson',
                         specialization: 'Enthusiastic Photographer',
@@ -110,6 +112,7 @@ class BrideZoneScreen extends StatelessWidget {
                         specialization: 'Enthusiastic Photographer',
                         rating: '⭐⭐⭐⭐⭐ 4.6',
                       ),
+                      */
                     ],
                     title: context.localizations.topRatedPhotographers,
                   );
@@ -122,6 +125,7 @@ class BrideZoneScreen extends StatelessWidget {
                         specialization: 'Expert Makeup Artist',
                         rating: '⭐⭐⭐⭐⭐ 4.9',
                       ),
+                      /*
                       ServiceCard(
                         name: 'Ava Taylor',
                         specialization: 'Expert Makeup Artist',
@@ -132,6 +136,7 @@ class BrideZoneScreen extends StatelessWidget {
                         specialization: 'Expert Makeup Artist',
                         rating: '⭐⭐⭐⭐⭐ 4.7',
                       ),
+                      */
                     ],
                     title: context.localizations.topRatedMakeupArtists,
                   );
@@ -144,6 +149,7 @@ class BrideZoneScreen extends StatelessWidget {
                         specialization: 'Expert Wedding Planner',
                         rating: '⭐⭐⭐⭐⭐ 4.9',
                       ),
+                      /*
                       ServiceCard(
                         name: 'Ava Taylor',
                         specialization: 'Expert Wedding Planner',
@@ -154,6 +160,7 @@ class BrideZoneScreen extends StatelessWidget {
                         specialization: 'Expert Wedding Planner',
                         rating: '⭐⭐⭐⭐⭐ 4.7',
                       ),
+                      */
                     ],
                     title: context.localizations.topRatedWeddingPlanners,
                   );
@@ -166,6 +173,7 @@ class BrideZoneScreen extends StatelessWidget {
                         specialization: 'Luxury Wedding Venue',
                         rating: '⭐⭐⭐⭐⭐ 4.9',
                       ),
+                      /*
                       ServiceCard(
                         name: 'Garden Paradise',
                         specialization: 'Outdoor Wedding Venue',
@@ -176,30 +184,24 @@ class BrideZoneScreen extends StatelessWidget {
                         specialization: 'Classic Wedding Venue',
                         rating: '⭐⭐⭐⭐⭐ 4.7',
                       ),
+                      */
                     ],
                     title: context.localizations.topRatedVenues,
                   );
                 } else if (state.selectedFilter ==
-                    context.localizations.catering) {
+                    context.localizations.dresses) {
                   return BrideZoneListSection(
                     serviceCards: [
-                      ServiceCard(
-                        name: 'Gourmet Delights',
-                        specialization: 'Premium Catering Service',
-                        rating: '⭐⭐⭐⭐⭐ 4.9',
-                      ),
-                      ServiceCard(
-                        name: 'Royal Feast',
-                        specialization: 'Traditional Catering Service',
-                        rating: '⭐⭐⭐⭐⭐ 4.8',
-                      ),
-                      ServiceCard(
-                        name: 'Modern Kitchen',
-                        specialization: 'Contemporary Catering Service',
-                        rating: '⭐⭐⭐⭐⭐ 4.7',
-                      ),
+                     DressServiceCard(
+                      dressImage: 'assets/images/dress1.png',
+                      dressPrice: '850 EGP',
+                     ),
+                     DressServiceCard(
+                      dressImage: 'assets/images/dress2.png',
+                      dressPrice: '950 EGP',
+                     ),
                     ],
-                    title: context.localizations.topRatedCaterers,
+                    title: context.localizations.topRatedVendors,
                   );
                 }
                 return Container();

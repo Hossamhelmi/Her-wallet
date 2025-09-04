@@ -1,5 +1,5 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:her_wallet/features/her_souq/presentation/cubit/her_souq_state.dart';
+import 'package:her_wallet/features/adds_hub/presentation/cubit/her_souq_state.dart';
 
 class HerSouqCubit extends Cubit<HerSouqState> {
   HerSouqCubit() : super(HerSouqState());

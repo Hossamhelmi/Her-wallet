@@ -13,8 +13,9 @@ class KidsClothingTab extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
-      padding: EdgeInsets.all(5.h),
+      padding: EdgeInsets.symmetric(horizontal: 10.h, vertical: 5.h),
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           ProductsHeader(),
           BlocBuilder<BabyHubCubit, BabyHubState>(
@@ -22,15 +23,20 @@ class KidsClothingTab extends StatelessWidget {
               return Wrap(
                 spacing: 8.0.w,
                 runSpacing: 8.0.h,
-                children: List.generate(
-                  2,
-                  (index) => BabyHubContainer(
-                    iamgePath: 'assets/images/kidsClothing.jpg',
-                    title: context.localizations.kidsClothing,
+                children: [
+                  BabyHubContainer(
+                    iamgePath: 'assets/images/kids1.png',
+                    title: 'Jeans Set with Sweater',
                     price: '350 EGP',
                     provider: context.localizations.kidsStore,
                   ),
-                ),
+                  BabyHubContainer(
+                    iamgePath: 'assets/images/kids2.png',
+                    title: 'T-Shirt with Shorts',
+                    price: '400 EGP',
+                    provider: context.localizations.kidsStore,
+                  ),
+                ],
               );
             },
           ),

@@ -8,6 +8,11 @@ class MyCircleDetailsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final args = ModalRoute.of(context)!.settings.arguments as Map<String, dynamic>;
+    final circleName = args['circleName'] as String;
+    final imagePath = args['imagePath'] as String;
+    final isOwner = args['isOwner'] as bool;
+
     return Scaffold(
       body: SafeArea(
         child: SingleChildScrollView(
@@ -17,10 +22,10 @@ class MyCircleDetailsScreen extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 CircleHeaderSection(
-                  circleName: context.localizations.animalsCircle,
+                  circleName: circleName,
                   memberCount: context.localizations.membersNumber,
-                  role: context.localizations.ownerRole,
-                  coverImagePath: 'assets/images/circle_cover1.jpg',
+                  role: isOwner ? context.localizations.ownerRole : context.localizations.memberRole,
+                  coverImagePath: imagePath,
                 ),
                 SizedBox(height: 8.h),
                 MyPostsSection(),

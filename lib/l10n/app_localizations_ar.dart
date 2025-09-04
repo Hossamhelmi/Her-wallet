@@ -162,7 +162,7 @@ class AppLocalizationsAr extends AppLocalizations {
   String get womensBazar => 'بازار النساء';
 
   @override
-  String get herSouq => 'سوقها';
+  String get addsHub => 'سوقها';
 
   @override
   String get womenEmpowerment => 'تمكين المرأة';
@@ -1503,7 +1503,7 @@ class AppLocalizationsAr extends AppLocalizations {
   String get reminder => 'تذكير';
 
   @override
-  String get reminderDescription => 'موعد اشتراك الجيم الشهرى';
+  String get reminderDescription => 'موعد اشتراك الجيم/الفاز الشهرى';
 
   @override
   String get confirmCancellation => 'تأكيد الإلغاء';
@@ -1657,4 +1657,16 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get topRatedCaterers => 'افضل مقدمى الطعام';
+
+  @override
+  String get memberRole => 'عضو';
+
+  @override
+  String get stores => 'المتاجر';
+
+  @override
+  String get dresses => 'الفساتين';
+
+  @override
+  String get topRatedVendors => 'المتاجر الاعلى تقييم';
 }

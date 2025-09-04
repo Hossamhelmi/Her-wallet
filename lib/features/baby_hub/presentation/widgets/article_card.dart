@@ -69,7 +69,11 @@ class ArticleCard extends StatelessWidget {
                 SizedBox(height: 8.h),
                 GestureDetector(
                   onTap: () {
-                    Navigator.pushNamed(context, AppRoutes.parentingTips);
+                    Navigator.pushNamed(context, AppRoutes.parentingTips,
+                        arguments: {
+                          'title': title,
+                          'imageUrl': imagePath,
+                        });
                   },
                   child: Row(
                     children: [

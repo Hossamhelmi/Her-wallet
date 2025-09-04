@@ -9,6 +9,10 @@ class ParentingTipsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final args =
+        ModalRoute.of(context)?.settings.arguments as Map<String, dynamic>?;
+        final title = args?['title'] as String?;
+        final imageUrl = args?['imageUrl'] as String?;
     return Scaffold(
       appBar: JustNameAppBar(title: context.localizations.parentingTips),
       body: SingleChildScrollView(
@@ -21,7 +25,7 @@ class ParentingTipsScreen extends StatelessWidget {
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(16.r),
                 child: Image.asset(
-                  'assets/images/parent_tips.jpg',
+                  imageUrl ?? 'assets/images/parent_tips.jpg',
                   height: 200.h,
                   width: double.infinity,
                   fit: BoxFit.cover,
@@ -32,7 +36,7 @@ class ParentingTipsScreen extends StatelessWidget {
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 24.w),
               child: Text(
-                context.localizations.developStrongBond,
+                title ?? context.localizations.howToDevelopEarlyReadingSkills,
                 style: TextStyle(
                   fontSize: 18.sp,
                   fontWeight: FontWeight.bold,

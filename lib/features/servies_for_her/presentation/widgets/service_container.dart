@@ -1,18 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:her_wallet/core/constants/app_colors.dart';
+import 'package:her_wallet/features/web_view/web_view.dart';
 
 class ServiceContainer extends StatelessWidget {
   final String title;
   final String description;
   final String imagePath;
   final String buttonText;
+  final String url;
+
   const ServiceContainer({
     super.key,
     required this.title,
     required this.description,
     required this.imagePath,
     required this.buttonText,
+    required this.url,
   });
 
   @override
@@ -71,7 +75,11 @@ class ServiceContainer extends StatelessWidget {
               width: MediaQuery.of(context).size.width * 0.35,
               height: 32.h,
               child: ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(
+                    builder: (context) => WebViewScreen(url: url),
+                  ));
+                },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: AppColors.mainColor,
                   foregroundColor: Colors.white,

@@ -7,7 +7,7 @@ import 'package:her_wallet/core/shared/widgets/just_name_appbar.dart';
 import '../widgets/widgets.dart';
 
 class ProductDetailsScreen extends StatefulWidget {
-  const ProductDetailsScreen({super.key});
+  const ProductDetailsScreen({super.key,});
 
   @override
   State<ProductDetailsScreen> createState() => _ProductDetailsScreenState();
@@ -18,6 +18,12 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final args =
+        ModalRoute.of(context)!.settings.arguments as Map<String, dynamic>?;
+    final title = args?['title'] ?? '';
+    final imageUrl = args?['imageUrl'] ?? '';
+    final price = args?['price'] ?? '850 EGP';
+
     return Scaffold(
       appBar: JustNameAppBar(
         title: context.localizations.productDetails,
@@ -39,11 +45,13 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                         // Product Image Gallery
                         ProductImageGallerySection(
                           imagePaths: [
+                            imageUrl,
+                            /*
                             'assets/images/bag.jpg',
                             'assets/images/bag.jpg',
                             'assets/images/bag.jpg',
                             'assets/images/bag.jpg',
-                            'assets/images/bag.jpg',
+                            */
                           ],
                         ),
                         SizedBox(height: 8.h),
@@ -52,9 +60,9 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                         ProductInfoSection(
                           sellerName: context.localizations.store,
                           sellerLogo: 'assets/images/store.png',
-                          productName: context.localizations.luxuryHandbag,
+                          productName: title,
                           rating: '${context.localizations.rating} ⭐ 4.8',
-                          price: ' 850 EGP',
+                          price: price,
                           discountText: '${context.localizations.save} 20%',
                           onShareTap: () {
                             // Handle share action
@@ -112,7 +120,7 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
 
           // Add to Cart Bottom Section
           AddToCartBottomSection(
-            price: '850 EGP',
+            price: price,
             isFavorite: isFavorite,
             onAddToCart: () {
               showDialog(
@@ -250,7 +258,11 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                   backgroundColor: AppColors.greenIcon,
                   content: Text(
                     context.localizations.addedToFavorites,
-                    style: TextStyle(color: Colors.white, fontSize: 16.sp, fontWeight: FontWeight.w600),
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 16.sp,
+                      fontWeight: FontWeight.w600,
+                    ),
                   ),
                   duration: Duration(seconds: 2),
                 ),

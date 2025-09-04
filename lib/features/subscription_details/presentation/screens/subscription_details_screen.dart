@@ -17,12 +17,15 @@ class SubscriptionDetailsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final args = ModalRoute.of(context)!.settings.arguments as Map<String, dynamic>?;
+    final title = args?['title'] ?? '';
+    final imagePath = args?['imagePath'] ?? '';
     final data = SubscriptionDetailsConstants.defaultData;
 
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          data.productName,
+          title,
           style: TextStyle(
             fontSize: 18.sp,
             fontWeight: FontWeight.w600,
@@ -41,7 +44,7 @@ class SubscriptionDetailsScreen extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               SizedBox(height: 8.h),
-              ProductImageSection(imagePath: data.imagePath),
+              ProductImageSection(imagePath: imagePath),
               SizedBox(height: 8.h),
               ProductDescriptionText(description: data.description),
               SizedBox(height: 8.h),
@@ -78,4 +81,3 @@ class SubscriptionDetailsScreen extends StatelessWidget {
     );
   }
 }
-

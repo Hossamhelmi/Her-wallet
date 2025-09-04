@@ -9,7 +9,7 @@ class AppLocalizationsEn extends AppLocalizations {
   AppLocalizationsEn([String locale = 'en']) : super(locale);
 
   @override
-  String get appName => 'Her Wallet';
+  String get appName => 'Her Wallet Cash';
 
   @override
   String get welcome => 'Welcome';
@@ -162,7 +162,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get womensBazar => 'Women\'s Bazar';
 
   @override
-  String get herSouq => 'Her Souq';
+  String get addsHub => 'Adds Hub';
 
   @override
   String get womenEmpowerment => 'Women Empowerment';
@@ -1401,10 +1401,10 @@ class AppLocalizationsEn extends AppLocalizations {
   String get transportation => 'Transportation';
 
   @override
-  String get foodDelivery => 'Food Delivery';
+  String get foodDelivery => 'Woman Food Delivery';
 
   @override
-  String get rideHailing => 'Ride Hailing';
+  String get rideHailing => 'Woman Ride Hailing';
 
   @override
   String get transportationServices => 'Transportation Services';
@@ -1503,7 +1503,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get reminder => 'Reminder';
 
   @override
-  String get reminderDescription => 'Pay gym due date';
+  String get reminderDescription => 'gym/gas due date';
 
   @override
   String get confirmCancellation => 'Confirm Cancellation';
@@ -1657,4 +1657,16 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get topRatedCaterers => 'Top Rated Caterers';
+
+  @override
+  String get memberRole => 'member';
+
+  @override
+  String get stores => 'Stores';
+
+  @override
+  String get dresses => 'Dresses';
+
+  @override
+  String get topRatedVendors => 'Top Rated Vendors';
 }

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:her_wallet/core/constants/app_colors.dart';
+import 'package:her_wallet/core/extensions/localization_extension.dart';
 import 'package:her_wallet/core/routes/app_routes.dart';
 
 class CircleHeaderSection extends StatelessWidget {
@@ -135,7 +136,7 @@ class CircleHeaderSection extends StatelessWidget {
       child: Container(
         padding: EdgeInsets.symmetric(horizontal: 12.w, vertical: 8.h),
         decoration: BoxDecoration(
-          color: AppColors.appBar,
+          color: role ==context.localizations.ownerRole ? AppColors.appBar : AppColors.iconGreyTertiary,
           borderRadius: BorderRadius.circular(25.r),
         ),
         child: Row(

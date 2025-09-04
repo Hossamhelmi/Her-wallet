@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:her_wallet/core/extensions/localization_extension.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -34,15 +35,20 @@ class HomeLayout extends StatelessWidget {
             ),
           ),
           backgroundColor: Colors.transparent,
-          /*
-          leading:  Padding(
-        padding: EdgeInsets.only(bottom: 5.h, left: 12.w),
-        child: IconButton(
-          icon: Icon(Icons.arrow_back_ios_new, color: Colors.white, size: 20.w),
-          onPressed: () => Navigator.pushReplacementNamed(context, AppRoutes.home),
-        ),
-      ),
-      */
+
+          leading: Padding(
+            padding: EdgeInsets.only(bottom: 5.h, left: 12.w),
+            child: IconButton(
+              icon: Icon(
+                Icons.arrow_back_ios_new,
+                color: Colors.white,
+                size: 20.w,
+              ),
+              onPressed:
+                  () => context.read<HomeLayoutCubit>().setCurrentIndex(0),
+            ),
+          ),
+
           centerTitle: false,
           title: Padding(
             padding: EdgeInsets.only(left: 35.0.w),
@@ -70,6 +76,18 @@ class HomeLayout extends StatelessWidget {
                 fontWeight: FontWeight.w600,
                 color: Colors.white,
               ),
+            ),
+          ),
+               leading: Padding(
+            padding: EdgeInsets.only(bottom: 5.h, left: 12.w),
+            child: IconButton(
+              icon: Icon(
+                Icons.arrow_back_ios_new,
+                color: Colors.white,
+                size: 20.w,
+              ),
+              onPressed:
+                  () => context.read<HomeLayoutCubit>().setCurrentIndex(0),
             ),
           ),
         );
@@ -125,6 +143,18 @@ class HomeLayout extends StatelessWidget {
               ),
             ),
           ),
+               leading: Padding(
+            padding: EdgeInsets.only(bottom: 5.h, left: 12.w),
+            child: IconButton(
+              icon: Icon(
+                Icons.arrow_back_ios_new,
+                color: Colors.white,
+                size: 20.w,
+              ),
+              onPressed:
+                  () => context.read<HomeLayoutCubit>().setCurrentIndex(0),
+            ),
+          ),
           actions: [
             CircleAvatar(
               backgroundColor: AppColors.backgroundprimary,
@@ -147,14 +177,28 @@ class HomeLayout extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocBuilder<HomeLayoutCubit, HomeLayoutState>(
       builder: (context, state) {
-        return Scaffold(
-          appBar: _buildAppBar(state.currentIndex, context),
-          body: CustomBottomNavigation.screens[state.currentIndex],
-          bottomNavigationBar: CustomBottomNavigation(
-            currentIndex: state.currentIndex,
-            onTap: (index) {
-              context.read<HomeLayoutCubit>().setCurrentIndex(index);
-            },
+        return PopScope(
+           canPop: false, // ❌ prevent auto app close
+        onPopInvokedWithResult: (didPop,result) {
+          if (!didPop) {
+            // If we’re not at the first tab, go back to index 0
+            if (state.currentIndex != 0) {
+              context.read<HomeLayoutCubit>().setCurrentIndex(0);
+            } else {
+              // If we are already at index 0 → exit app manually
+              SystemNavigator.pop(); // or show a "Press again to exit" toast
+            }
+          }
+        },
+          child: Scaffold(
+            appBar: _buildAppBar(state.currentIndex, context),
+            body: CustomBottomNavigation.screens[state.currentIndex],
+            bottomNavigationBar: CustomBottomNavigation(
+              currentIndex: state.currentIndex,
+              onTap: (index) {
+                context.read<HomeLayoutCubit>().setCurrentIndex(index);
+              },
+            ),
           ),
         );
       },

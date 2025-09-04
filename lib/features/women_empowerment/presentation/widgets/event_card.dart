@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:her_wallet/core/constants/app_colors.dart';
+import 'package:her_wallet/features/web_view/web_view.dart';
 
 class EventCard extends StatelessWidget {
   final String name;
@@ -87,7 +88,14 @@ class EventCard extends StatelessWidget {
                             borderRadius: BorderRadius.circular(24.r),
                           ),
                         ),
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => WebViewScreen(url: 'https://www.event-leadership.com/english/event-consulting'),
+                            ),
+                          );
+                        },
                         child: Text(
                           'Session Details',
                           style: TextStyle(fontSize: 14.sp),

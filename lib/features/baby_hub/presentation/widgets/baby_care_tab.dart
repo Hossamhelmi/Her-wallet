@@ -13,24 +13,31 @@ class BabyCareTab extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
-      padding: EdgeInsets.all(5.h),
+      padding: EdgeInsets.symmetric(horizontal: 10.h, vertical: 5.h),
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           ProductsHeader(),
           BlocBuilder<BabyHubCubit, BabyHubState>(
             builder: (context, state) {
               return Wrap(
-                spacing: 8.0.w,
+                
+                spacing: 12.0.w,
                 runSpacing: 8.0.h,
-                children: List.generate(
-                  2,
-                  (index) => BabyHubContainer(
-                    iamgePath: 'assets/images/babyCare.jpg',
-                    title: context.localizations.babyEssentials,
+                children: [
+                   BabyHubContainer(
+                    iamgePath: 'assets/images/babyCare1.png',
+                    title: 'Baby Moisturizing Cream',
                     price: '450 EGP',
                     provider: context.localizations.misrPharmacy,
                   ),
-                ),
+                  BabyHubContainer(
+                    iamgePath: 'assets/images/babyCare2.png',
+                    title: 'Gentle Baby Shampoo',
+                    price: '300 EGP',
+                    provider: context.localizations.misrPharmacy,
+                  ),
+                ],
               );
             },
           ),

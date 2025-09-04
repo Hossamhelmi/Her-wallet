@@ -123,15 +123,18 @@ class ForHerServicesScreen extends StatelessWidget {
         ServiceContainer(
           title: context.localizations.rideHailing,
           description: context.localizations.rideHailingTransportOptions,
-          imagePath: 'assets/images/ride-hailing.jpg',
+          imagePath: 'assets/images/womanRideHailing.jpg',
           buttonText: context.localizations.bookYourRide,
+          url: 'https://www.uber.com/fi/en/',
         ),
+        /*
         ServiceContainer(
           title: 'Uber',
           description: context.localizations.rideHailingTransportOptions,
           imagePath: 'assets/images/ride-hailing.jpg',
           buttonText: context.localizations.bookYourRide,
         ),
+        */
       ],
     );
   }
@@ -144,15 +147,18 @@ class ForHerServicesScreen extends StatelessWidget {
         ServiceContainer(
           title: context.localizations.foodDelivery,
           description: context.localizations.fastFoodDelivery,
-          imagePath: 'assets/images/food-delivery.jpg',
+          imagePath: 'assets/images/womanDelivery.jpg',
           buttonText: context.localizations.orderNow,
+          url: 'https://www.talabat.com/egypt/restaurants',
         ),
+        /*
         ServiceContainer(
           title: 'Food Express',
           description: context.localizations.fastFoodDelivery,
           imagePath: 'assets/images/food-delivery.jpg',
           buttonText: context.localizations.orderNow,
         ),
+        */
       ],
     );
   }
@@ -167,13 +173,16 @@ class ForHerServicesScreen extends StatelessWidget {
           description: context.localizations.beautyServices,
           imagePath: 'assets/images/beauty-salons.jpg',
           buttonText: context.localizations.bookNow,
+          url: 'https://mahekbeauty.com/',
         ),
+        /*
         ServiceContainer(
           title: 'Premium Salon',
           description: context.localizations.beautyServices,
           imagePath: 'assets/images/beauty-salons.jpg',
           buttonText: context.localizations.bookNow,
         ),
+        */
       ],
     );
   }

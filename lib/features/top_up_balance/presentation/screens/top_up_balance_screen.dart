@@ -53,6 +53,10 @@ class _TopUpBalanceScreenState extends State<TopUpBalanceScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final args = ModalRoute.of(context)!.settings.arguments as Map<String, dynamic>;
+
+    final bool isSendMoney = args['isSendMoney'];
+
     return Scaffold(
       appBar: AppBar(
         backgroundColor: AppColors.appBar,
@@ -69,7 +73,7 @@ class _TopUpBalanceScreenState extends State<TopUpBalanceScreen> {
           ),
         ),
         title: Text(
-          context.localizations.topUpYourBalance,
+          isSendMoney ? context.localizations.sendMoney : context.localizations.topUpYourBalance,
           style: TextStyle(
             fontSize: 16.sp,
             fontWeight: FontWeight.w600,
@@ -100,7 +104,8 @@ class _TopUpBalanceScreenState extends State<TopUpBalanceScreen> {
             ),
             SizedBox(height: 8.h),
             TopUpButton(
-              buttonText: context.localizations.topUpNow,
+
+              buttonText: isSendMoney ? context.localizations.sendMoney : context.localizations.topUpNow,
               onPressed: () {
                 // Handle top-up action here
                 Navigator.pushNamed(

@@ -8,7 +8,8 @@ import 'package:her_wallet/features/subscription/presentation/widgets/renewal_da
 import 'package:her_wallet/features/subscription/presentation/widgets/action_buttons_section.dart';
 
 class SubscriptionBoxCard extends StatelessWidget {
-  const SubscriptionBoxCard({super.key});
+  final String coverImage;
+  const SubscriptionBoxCard({super.key, required this.coverImage});
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +23,7 @@ class SubscriptionBoxCard extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const CoverImageSection(),
+             CoverImageSection(coverImage: coverImage,),
             const BoxHeaderSection(),
             const RenewalDateSection(),
              ActionButtonsSection( 

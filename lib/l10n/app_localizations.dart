@@ -98,7 +98,7 @@ abstract class AppLocalizations {
   /// No description provided for @appName.
   ///
   /// In en, this message translates to:
-  /// **'Her Wallet'**
+  /// **'Her Wallet Cash'**
   String get appName;
 
   /// No description provided for @welcome.
@@ -401,11 +401,11 @@ abstract class AppLocalizations {
   /// **'Women\'s Bazar'**
   String get womensBazar;
 
-  /// No description provided for @herSouq.
+  /// No description provided for @addsHub.
   ///
   /// In en, this message translates to:
-  /// **'Her Souq'**
-  String get herSouq;
+  /// **'Adds Hub'**
+  String get addsHub;
 
   /// No description provided for @womenEmpowerment.
   ///
@@ -2882,13 +2882,13 @@ abstract class AppLocalizations {
   /// No description provided for @foodDelivery.
   ///
   /// In en, this message translates to:
-  /// **'Food Delivery'**
+  /// **'Woman Food Delivery'**
   String get foodDelivery;
 
   /// No description provided for @rideHailing.
   ///
   /// In en, this message translates to:
-  /// **'Ride Hailing'**
+  /// **'Woman Ride Hailing'**
   String get rideHailing;
 
   /// No description provided for @transportationServices.
@@ -3086,7 +3086,7 @@ abstract class AppLocalizations {
   /// No description provided for @reminderDescription.
   ///
   /// In en, this message translates to:
-  /// **'Pay gym due date'**
+  /// **'gym/gas due date'**
   String get reminderDescription;
 
   /// No description provided for @confirmCancellation.
@@ -3394,6 +3394,30 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Top Rated Caterers'**
   String get topRatedCaterers;
+
+  /// No description provided for @memberRole.
+  ///
+  /// In en, this message translates to:
+  /// **'member'**
+  String get memberRole;
+
+  /// No description provided for @stores.
+  ///
+  /// In en, this message translates to:
+  /// **'Stores'**
+  String get stores;
+
+  /// No description provided for @dresses.
+  ///
+  /// In en, this message translates to:
+  /// **'Dresses'**
+  String get dresses;
+
+  /// No description provided for @topRatedVendors.
+  ///
+  /// In en, this message translates to:
+  /// **'Top Rated Vendors'**
+  String get topRatedVendors;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

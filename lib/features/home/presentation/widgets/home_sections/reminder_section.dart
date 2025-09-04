@@ -63,7 +63,8 @@ class ReminderSection extends StatelessWidget {
             onTap: () {
              Navigator.pushNamed(
                 context,
-                AppRoutes.topUpBalance, // Replace with your actual payment route
+                AppRoutes.topUpBalance,
+                arguments: {"isSendMoney": false},
               );
             },
             child: Row(

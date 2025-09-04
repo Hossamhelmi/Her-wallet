@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:her_wallet/core/constants/app_colors.dart';
 import 'package:her_wallet/core/extensions/localization_extension.dart';
+import 'package:her_wallet/features/web_view/web_view.dart';
 
 class ServiceCard extends StatelessWidget {
   final String name;
@@ -71,7 +72,14 @@ class ServiceCard extends StatelessWidget {
             height: 30.h,
             width: MediaQuery.of(context).size.width * 0.41,
             child: ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => WebViewScreen(url: 'https://www.behance.net/'),
+                  ),
+                );
+              },
               style: ElevatedButton.styleFrom(
                 backgroundColor: AppColors.mainColor,
                 shape: RoundedRectangleBorder(

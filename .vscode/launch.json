@@ -11,7 +11,7 @@
             "name": "Her Wallet Development",
             "request": "launch",
             "type": "dart",
-            "program": "lib/main.dev.dart"
+            "program": "lib/main_dev.dart"
         },
         {
             "name": "Her Wallet Production",

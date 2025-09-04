@@ -38,21 +38,41 @@ class DiscoverMoreSection extends StatelessWidget {
                   name: context.localizations.skinCare,
                   membersCount: context.localizations.membersNumber,
                   icon: Icons.face,
+                  arguments: {
+                    'circleName': context.localizations.skinCare,
+                    'imagePath': 'assets/images/skincare.jpg',
+                    'isOwner': false,
+                  },
                 ),
                 DiscoverCircleCard(
                   name: context.localizations.babyCare,
                   membersCount: context.localizations.membersNumber,
                   icon: Icons.baby_changing_station_outlined,
+                  arguments: {
+                    'circleName': context.localizations.babyCare,
+                    'imagePath': 'assets/images/babyCare.jpg',
+                    'isOwner': false,
+                  },
                 ),
                 DiscoverCircleCard(
                   name: context.localizations.brideZone,
                   membersCount: context.localizations.membersNumber,
                   icon: Icons.party_mode_outlined,
+                  arguments: {
+                    'circleName': context.localizations.brideZone,
+                    'imagePath': 'assets/images/beauty-salons.jpg',
+                    'isOwner': false,
+                  },
                 ),
                 DiscoverCircleCard(
                   name: context.localizations.womenEmpowerment,
                   membersCount: context.localizations.membersNumber,
                   icon: Icons.woman_2_outlined,
+                  arguments: {
+                    'circleName': context.localizations.womenEmpowerment,
+                    'imagePath': 'assets/images/woman.jpg',
+                    'isOwner': false,
+                  },
                 ),
               ],
             ),

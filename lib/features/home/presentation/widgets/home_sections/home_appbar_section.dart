@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:her_wallet/core/constants/app_colors.dart';
 import 'package:her_wallet/core/extensions/localization_extension.dart';
+import 'package:her_wallet/core/routes/app_routes.dart';
 import 'package:her_wallet/features/home_layout/presentation/cubits/home_cubit.dart';
 
 class HomeAppbarSection extends AppBar {
@@ -52,24 +53,7 @@ class HomeAppbarSection extends AppBar {
         _buildActionButton(
           icon: Icons.notifications_outlined,
           onPressed: () {
-            showDialog(
-              context: context,
-              builder: (BuildContext context) {
-                return AlertDialog(
-                  backgroundColor: AppColors.surface,
-                  title: Text(context.localizations.notifications),
-                  content: Text('No new notifications at the moment.'),
-                  actions: [
-                    TextButton(
-                      onPressed: () {
-                        Navigator.of(context).pop();
-                      },
-                      child: Text(context.localizations.close),
-                    ),
-                  ],
-                );
-              },
-            );
+            Navigator.pushNamed(context, AppRoutes.notifications);
           },
         ),
         SizedBox(width: 16.w),
