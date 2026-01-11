@@ -60,10 +60,12 @@ class AppLocalizationsAr extends AppLocalizations {
   String get forgotYourPassword => 'نسيت كلمة المرور';
 
   @override
-  String get passwordInstructions => 'نوصي باستخدام 8 أحرف على الأقل، مع أرقام أو رموز.';
+  String get passwordInstructions =>
+      'نوصي باستخدام 8 أحرف على الأقل، مع أرقام أو رموز.';
 
   @override
-  String get forgotPasswordLine => 'أدخل رقم هاتفك أو بريدك الإلكتروني وسنرسل لك رمزاً لإعادة تعيين كلمة المرور.';
+  String get forgotPasswordLine =>
+      'أدخل رقم هاتفك أو بريدك الإلكتروني وسنرسل لك رمزاً لإعادة تعيين كلمة المرور.';
 
   @override
   String get newPassword => 'كلمة المرور الجديدة';
@@ -78,13 +80,15 @@ class AppLocalizationsAr extends AppLocalizations {
   String get enterConfirmPassword => 'أدخل تأكيد كلمة المرور';
 
   @override
-  String get newPasswordLine => 'الآن يمكنك اختيار كلمة مرور جديدة لحسابك تأكد من أنها قوية وسهلة التذكر.';
+  String get newPasswordLine =>
+      'الآن يمكنك اختيار كلمة مرور جديدة لحسابك تأكد من أنها قوية وسهلة التذكر.';
 
   @override
   String get enterVerificationCode => 'أدخل رمز التحقق';
 
   @override
-  String get verificationCodeLine => 'لقد أرسلنا لك رمزاً مكوناً من 5 أرقام إلى هاتفك أو بريدك الإلكتروني. يرجى إدخاله هنا حتى نتمكن من المتابعة';
+  String get verificationCodeLine =>
+      'لقد أرسلنا لك رمزاً مكوناً من 5 أرقام إلى هاتفك أو بريدك الإلكتروني. يرجى إدخاله هنا حتى نتمكن من المتابعة';
 
   @override
   String get rememberMe => 'تذكرني';
@@ -240,7 +244,8 @@ class AppLocalizationsAr extends AppLocalizations {
   String get circlePublicDescription => 'يمكن لأي شخص الانضمام\nوالمشاركة';
 
   @override
-  String get circlePrivatePrivateDescription => 'فقط الأعضاء المدعوون يمكنهم\nالانضمام وعرض التعليقات';
+  String get circlePrivatePrivateDescription =>
+      'فقط الأعضاء المدعوون يمكنهم\nالانضمام وعرض التعليقات';
 
   @override
   String get myPosts => 'منشوراتي';
@@ -390,13 +395,15 @@ class AppLocalizationsAr extends AppLocalizations {
   String get secureTransactions => 'معاملات آمنة 100%';
 
   @override
-  String get advancedEncryption => 'نستخدم التشفير المتقدم للحفاظ على بياناتك وأموالك آمنة.';
+  String get advancedEncryption =>
+      'نستخدم التشفير المتقدم للحفاظ على بياناتك وأموالك آمنة.';
 
   @override
   String get topUpSuccessful => 'تم الشحن بنجاح!';
 
   @override
-  String get topUpSuccessMessage => 'تم إضافة 500.00 جنيه مصري إلى رصيد محفظتك.';
+  String get topUpSuccessMessage =>
+      'تم إضافة 500.00 جنيه مصري إلى رصيد محفظتك.';
 
   @override
   String get transactionId => 'معرف المعاملة:';
@@ -576,7 +583,8 @@ class AppLocalizationsAr extends AppLocalizations {
   String get selectWhatMatchesYourIntersets => 'اختر ما يناسب\nاهتماماتك';
 
   @override
-  String get goldSilverOrBronze => 'ذهبي أو فضي أو برونزي\nمرن لتلبية احتياجاتك';
+  String get goldSilverOrBronze =>
+      'ذهبي أو فضي أو برونزي\nمرن لتلبية احتياجاتك';
 
   @override
   String get yourBoxArrives => 'يصل صندوقك إلى\nعتبة بابك كل شهر';
@@ -702,7 +710,8 @@ class AppLocalizationsAr extends AppLocalizations {
   String get skinCareBoxTitle => 'صندوق العناية بالبشرة';
 
   @override
-  String get skinCareBoxDescription => 'استمتع بالتوصيل الشهري لمنتجات العناية بالبشرة المختارة بعناية والمصممة خصيصاً لاحتياجاتك. كل صندوق يحتوي على مجموعة من المنتجات عالية الجودة المصممة لتغذية وتجديد بشرتك.';
+  String get skinCareBoxDescription =>
+      'استمتع بالتوصيل الشهري لمنتجات العناية بالبشرة المختارة بعناية والمصممة خصيصاً لاحتياجاتك. كل صندوق يحتوي على مجموعة من المنتجات عالية الجودة المصممة لتغذية وتجديد بشرتك.';
 
   @override
   String get subscribingToPlan => 'الاشتراك في الخطة:';
@@ -819,13 +828,16 @@ class AppLocalizationsAr extends AppLocalizations {
   String get quickHealthyMeals => 'وجبات صحية سريعة التحضير';
 
   @override
-  String get healthyMealsDescription => 'وجبات صحية سريعة التحضير للأمهات المشغولات.';
+  String get healthyMealsDescription =>
+      'وجبات صحية سريعة التحضير للأمهات المشغولات.';
 
   @override
-  String get earlyReadingSkills => 'كيفية تطوير مهارات القراءة المبكرة عند الأطفال';
+  String get earlyReadingSkills =>
+      'كيفية تطوير مهارات القراءة المبكرة عند الأطفال';
 
   @override
-  String get readingSkillsDescription => 'اقرأ عن أهمية مهارات القراءة المبكرة وكيفية تشجيع طفلك على تطوير حب الكتب.';
+  String get readingSkillsDescription =>
+      'اقرأ عن أهمية مهارات القراءة المبكرة وكيفية تشجيع طفلك على تطوير حب الكتب.';
 
   @override
   String get articleDate => '12 يوليو 2023';
@@ -840,7 +852,8 @@ class AppLocalizationsAr extends AppLocalizations {
   String get sarahAlHassan => 'سارة الحسن';
 
   @override
-  String get bondingDescription => 'اقرأ هذا المقال لتعلم استراتيجيات فعالة لبناء علاقة عاطفية قوية مع طفلك، وتعزيز الثقة، وتحسين التواصل.';
+  String get bondingDescription =>
+      'اقرأ هذا المقال لتعلم استراتيجيات فعالة لبناء علاقة عاطفية قوية مع طفلك، وتعزيز الثقة، وتحسين التواصل.';
 
   @override
   String get similarArticles => 'مقالات مشابهة';
@@ -1149,19 +1162,22 @@ class AppLocalizationsAr extends AppLocalizations {
   String get onboardingTitle1 => 'محفظة... على طريقتك.';
 
   @override
-  String get onboardingDescription1 => 'كل ما تحتاجينه لإدارة أموالك بسهولة وأمان... في تطبيق أنيق مصمم خصيصاً للاهتمام بتفاصيلك.';
+  String get onboardingDescription1 =>
+      'كل ما تحتاجينه لإدارة أموالك بسهولة وأمان... في تطبيق أنيق مصمم خصيصاً للاهتمام بتفاصيلك.';
 
   @override
   String get onboardingTitle2 => 'جميع خدماتك في مكان واحد';
 
   @override
-  String get onboardingDescription2 => 'ادفعي فواتيرك، تسوقي لنفسك ولاحتياجات أطفالك، واختاري الصناديق الشهرية التي تناسب ذوقك.';
+  String get onboardingDescription2 =>
+      'ادفعي فواتيرك، تسوقي لنفسك ولاحتياجات أطفالك، واختاري الصناديق الشهرية التي تناسب ذوقك.';
 
   @override
   String get onboardingTitle3 => 'اعثري على دائرتك';
 
   @override
-  String get onboardingDescription3 => 'انضمي إلى نساء مثلك، شاركي قصتك، واشعري بالدعم الحقيقي';
+  String get onboardingDescription3 =>
+      'انضمي إلى نساء مثلك، شاركي قصتك، واشعري بالدعم الحقيقي';
 
   @override
   String get animalsCircle => 'الحيوانات';
@@ -1176,7 +1192,8 @@ class AppLocalizationsAr extends AppLocalizations {
   String get twoHoursAgo => 'منذ ساعتين';
 
   @override
-  String get puppyPostContent => 'مرحباً بالجميع! لقد تبنيت جروً جديداً وأنا متحمسة جداً لمشاركة هذا معكم جميعاً. إنه كرة صغيرة من الطاقة والحب!';
+  String get puppyPostContent =>
+      'مرحباً بالجميع! لقد تبنيت جروً جديداً وأنا متحمسة جداً لمشاركة هذا معكم جميعاً. إنه كرة صغيرة من الطاقة والحب!';
 
   @override
   String get myOrders => 'طلباتي';
@@ -1260,7 +1277,8 @@ class AppLocalizationsAr extends AppLocalizations {
   String get buildingTrustAndCommunication => 'بناء الثقة والتواصل';
 
   @override
-  String get effectiveParentingDescription => 'الأبوة والأمومة الفعالة تتضمن خلق بيئة يشعر فيها الأطفال بالأمان للتعبير عن أنفسهم. هذا يشمل الاستماع الفعال وإظهار التعاطف والحفاظ على حدود ثابتة.';
+  String get effectiveParentingDescription =>
+      'الأبوة والأمومة الفعالة تتضمن خلق بيئة يشعر فيها الأطفال بالأمان للتعبير عن أنفسهم. هذا يشمل الاستماع الفعال وإظهار التعاطف والحفاظ على حدود ثابتة.';
 
   @override
   String get termsAndConditions => 'الشروط والأحكام';
@@ -1269,31 +1287,36 @@ class AppLocalizationsAr extends AppLocalizations {
   String get introduction => '1. المقدمة';
 
   @override
-  String get introductionContent => 'تحكم هذه الشروط والأحكام استخدامك لتطبيقنا. باستخدام تطبيقنا، فإنك توافق على الامتثال لهذه الشروط والالتزام بها.';
+  String get introductionContent =>
+      'تحكم هذه الشروط والأحكام استخدامك لتطبيقنا. باستخدام تطبيقنا، فإنك توافق على الامتثال لهذه الشروط والالتزام بها.';
 
   @override
   String get userObligations => '2. التزامات المستخدم';
 
   @override
-  String get userObligationsContent => 'توافق على استخدام التطبيق وفقاً لجميع القوانين واللوائح المعمول بها. أنت مسؤول عن الحفاظ على سرية معلومات حسابك.';
+  String get userObligationsContent =>
+      'توافق على استخدام التطبيق وفقاً لجميع القوانين واللوائح المعمول بها. أنت مسؤول عن الحفاظ على سرية معلومات حسابك.';
 
   @override
   String get limitationOfLiability => '3. تحديد المسؤولية';
 
   @override
-  String get limitationOfLiabilityContent => 'مسؤوليتنا محدودة بأقصى حد يسمح به القانون. لن نكون مسؤولين عن أي أضرار غير مباشرة أو عارضة أو تبعية.';
+  String get limitationOfLiabilityContent =>
+      'مسؤوليتنا محدودة بأقصى حد يسمح به القانون. لن نكون مسؤولين عن أي أضرار غير مباشرة أو عارضة أو تبعية.';
 
   @override
   String get modifications => '4. التعديلات';
 
   @override
-  String get modificationsContent => 'نحتفظ بالحق في تعديل هذه الشروط في أي وقت. ستصبح التغييرات سارية فور نشرها في التطبيق.';
+  String get modificationsContent =>
+      'نحتفظ بالحق في تعديل هذه الشروط في أي وقت. ستصبح التغييرات سارية فور نشرها في التطبيق.';
 
   @override
   String get termination => '5. الإنهاء';
 
   @override
-  String get terminationContent => 'قد نقوم بإنهاء أو تعليق وصولك إلى التطبيق في أي وقت، مع أو بدون سبب، ومع أو بدون إشعار.';
+  String get terminationContent =>
+      'قد نقوم بإنهاء أو تعليق وصولك إلى التطبيق في أي وقت، مع أو بدون سبب، ومع أو بدون إشعار.';
 
   @override
   String get mentorship => 'الإرشاد';
@@ -1332,31 +1355,36 @@ class AppLocalizationsAr extends AppLocalizations {
   String get privacyIntroduction => '1. المقدمة';
 
   @override
-  String get privacyIntroductionContent => 'تحدد سياسة الخصوصية هذه كيفية تعاملنا مع معلوماتك الشخصية عند استخدام تطبيقنا. نحن ملتزمون بحماية خصوصيتك وضمان أمان بياناتك.';
+  String get privacyIntroductionContent =>
+      'تحدد سياسة الخصوصية هذه كيفية تعاملنا مع معلوماتك الشخصية عند استخدام تطبيقنا. نحن ملتزمون بحماية خصوصيتك وضمان أمان بياناتك.';
 
   @override
   String get informationCollection => '2. جمع المعلومات';
 
   @override
-  String get informationCollectionContent => 'قد نجمع معلومات شخصية منك عند استخدام تطبيقنا، بما في ذلك على سبيل المثال لا الحصر اسمك وعنوان بريدك الإلكتروني وبيانات الاستخدام. يتم جمع هذه المعلومات فقط بموافقتك.';
+  String get informationCollectionContent =>
+      'قد نجمع معلومات شخصية منك عند استخدام تطبيقنا، بما في ذلك على سبيل المثال لا الحصر اسمك وعنوان بريدك الإلكتروني وبيانات الاستخدام. يتم جمع هذه المعلومات فقط بموافقتك.';
 
   @override
   String get informationUse => '3. استخدام المعلومات';
 
   @override
-  String get informationUseContent => 'نستخدم معلوماتك لتقديم وتحسين خدماتنا والتواصل معك وضمان أمان تطبيقنا. لن يتم بيع بياناتك لأطراف ثالثة أبداً.';
+  String get informationUseContent =>
+      'نستخدم معلوماتك لتقديم وتحسين خدماتنا والتواصل معك وضمان أمان تطبيقنا. لن يتم بيع بياناتك لأطراف ثالثة أبداً.';
 
   @override
   String get dataSecurity => '4. أمان البيانات';
 
   @override
-  String get dataSecurityContent => 'نطبق تدابير أمنية مناسبة لحماية معلوماتك الشخصية من الوصول غير المصرح به أو التغيير أو الكشف أو التدمير.';
+  String get dataSecurityContent =>
+      'نطبق تدابير أمنية مناسبة لحماية معلوماتك الشخصية من الوصول غير المصرح به أو التغيير أو الكشف أو التدمير.';
 
   @override
   String get contactUs => '5. اتصل بنا';
 
   @override
-  String get contactUsContent => 'إذا كان لديك أي أسئلة حول سياسة الخصوصية هذه، يرجى الاتصال بنا من خلال التطبيق أو قنوات الدعم الرسمية لدينا.';
+  String get contactUsContent =>
+      'إذا كان لديك أي أسئلة حول سياسة الخصوصية هذه، يرجى الاتصال بنا من خلال التطبيق أو قنوات الدعم الرسمية لدينا.';
 
   @override
   String get shippingInformation => 'معلومات الشحن';
@@ -1509,7 +1537,8 @@ class AppLocalizationsAr extends AppLocalizations {
   String get confirmCancellation => 'تأكيد الإلغاء';
 
   @override
-  String get areYouSureCancelSubscription => 'هل أنت متأكد من أنك تريد إلغاء اشتراكك؟ سيؤدي هذا إلى ما يلي:';
+  String get areYouSureCancelSubscription =>
+      'هل أنت متأكد من أنك تريد إلغاء اشتراكك؟ سيؤدي هذا إلى ما يلي:';
 
   @override
   String get cancelingAccumulatedPoints => 'إلغاء جميع النقاط المتراكمة.';
@@ -1542,7 +1571,8 @@ class AppLocalizationsAr extends AppLocalizations {
   String get importantNotes => 'ملاحظات مهمة';
 
   @override
-  String get subscriptionPausedForDuration => '- سيتم إيقاف اشتراكك مؤقتاً للمدة المحددة.';
+  String get subscriptionPausedForDuration =>
+      '- سيتم إيقاف اشتراكك مؤقتاً للمدة المحددة.';
 
   @override
   String get resumeSubscriptionAnytime => '- يمكنك استئناف اشتراكك في أي وقت.';
@@ -1578,7 +1608,8 @@ class AppLocalizationsAr extends AppLocalizations {
   String get orderPlaced => 'لقد تم استقبال طلبك بنجاح';
 
   @override
-  String get orderProcessing => 'شكرا على الدفع, طلبك قيد التجهيز وسيتم شحنه قريباً';
+  String get orderProcessing =>
+      'شكرا على الدفع, طلبك قيد التجهيز وسيتم شحنه قريباً';
 
   @override
   String get amount => 'القيمة';
@@ -1620,10 +1651,12 @@ class AppLocalizationsAr extends AppLocalizations {
   String get babyEssentials => 'أساسيات الأطفال';
 
   @override
-  String get howToDevelopEarlyReadingSkills => 'كيفية تطوير مهارات القراءة المبكرة عند الأطفال';
+  String get howToDevelopEarlyReadingSkills =>
+      'كيفية تطوير مهارات القراءة المبكرة عند الأطفال';
 
   @override
-  String get readAboutImportanceOfEarlyReading => 'اقرأ عن أهمية مهارات القراءة المبكرة وكيفية تشجيع طفلك على تطوير حب الكتب.';
+  String get readAboutImportanceOfEarlyReading =>
+      'اقرأ عن أهمية مهارات القراءة المبكرة وكيفية تشجيع طفلك على تطوير حب الكتب.';
 
   @override
   String get fastFoodDelivery => 'اسرع توصيل للطلبات ';
@@ -1669,4 +1702,13 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get topRatedVendors => 'المتاجر الاعلى تقييم';
+
+  @override
+  String get gym => 'الجيم';
+
+  @override
+  String get marketplace => 'المتجر';
+
+  @override
+  String get confirmPayment => 'تأكيد الدفع';
 }

@@ -54,7 +54,9 @@ class _MyAppState extends State<MyApp> {
       child: MaterialApp(
         title: 'Her Wallet',
         theme: AppTheme.lightTheme,
-        routes: AppRoutes.routes,
+      //  routes: AppRoutes.routes,
+        initialRoute: AppRoutes.splash,
+        onGenerateRoute: AppRoutes.onGenerateRoute,
         debugShowCheckedModeBanner: false,
         locale: _locale,
         localizationsDelegates: const [

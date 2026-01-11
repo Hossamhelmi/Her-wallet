@@ -36,6 +36,30 @@ class KidsClothingTab extends StatelessWidget {
                     price: '400 EGP',
                     provider: context.localizations.kidsStore,
                   ),
+                  BabyHubContainer(
+                    iamgePath: 'assets/images/kids3.png',
+                    title: 'Casual Dress',
+                    price: '300 EGP',
+                    provider: context.localizations.kidsStore,
+                  ),
+                  BabyHubContainer(
+                    iamgePath: 'assets/images/kids4.png',
+                    title: 'Hoodie with Joggers',
+                    price: '450 EGP',
+                    provider: context.localizations.kidsStore,
+                  ),
+                  BabyHubContainer(
+                    iamgePath: 'assets/images/kids5.png',
+                    title: 'Summer Dress',
+                    price: '320 EGP',
+                    provider: context.localizations.kidsStore,
+                  ),
+                  BabyHubContainer(
+                    iamgePath: 'assets/images/kids6.png',
+                    title: 'Polo Shirt with Chinos',
+                    price: '380 EGP',
+                    provider: context.localizations.kidsStore,
+                  ),
                 ],
               );
             },

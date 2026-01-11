@@ -32,6 +32,7 @@ class Product extends StatelessWidget {
             'price': price,
             'date': date,
             'category': category,
+            'fromAddsHub': true,
           });
         },
         child: Container(

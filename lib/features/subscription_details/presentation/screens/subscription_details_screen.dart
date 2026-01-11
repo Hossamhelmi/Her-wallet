@@ -8,7 +8,9 @@ import 'package:her_wallet/features/subscription_details/core/constants/subscrip
 import 'package:her_wallet/features/subscription_details/presentation/widgets/widgets.dart';
 
 class SubscriptionDetailsScreen extends StatelessWidget {
-  const SubscriptionDetailsScreen({super.key});
+  final String title;
+  final String imagePath;
+  const SubscriptionDetailsScreen({super.key, required this.title, required this.imagePath});
 
   void _handleSubscription(context) {
     // Handle subscription action
@@ -17,9 +19,6 @@ class SubscriptionDetailsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final args = ModalRoute.of(context)!.settings.arguments as Map<String, dynamic>?;
-    final title = args?['title'] ?? '';
-    final imagePath = args?['imagePath'] ?? '';
     final data = SubscriptionDetailsConstants.defaultData;
 
     return Scaffold(

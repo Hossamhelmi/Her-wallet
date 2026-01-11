@@ -37,6 +37,30 @@ class BabyCareTab extends StatelessWidget {
                     price: '300 EGP',
                     provider: context.localizations.misrPharmacy,
                   ),
+                  BabyHubContainer(
+                    iamgePath: 'assets/images/babyCare3.png',
+                    title: 'Soothing Baby Lotion',
+                    price: '400 EGP',
+                    provider: context.localizations.misrPharmacy,
+                  ),
+                  BabyHubContainer(
+                    iamgePath: 'assets/images/babyCare4.png',
+                    title: 'Diaper Rash Cream',
+                    price: '350 EGP',
+                    provider: context.localizations.misrPharmacy,
+                  ),
+                  BabyHubContainer(
+                    iamgePath: 'assets/images/babyCare1.png',
+                     title: 'Baby Moisturizing Cream',
+                    price: '450 EGP',
+                    provider: context.localizations.misrPharmacy,
+                  ),
+                  BabyHubContainer(
+                    iamgePath: 'assets/images/babyCare2.png',
+                      title: 'Gentle Baby Shampoo',
+                    price: '300 EGP',
+                    provider: context.localizations.misrPharmacy,
+                  ),
                 ],
               );
             },

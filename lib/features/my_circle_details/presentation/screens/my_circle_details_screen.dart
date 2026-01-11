@@ -4,14 +4,14 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../widgets/widgets.dart';
 
 class MyCircleDetailsScreen extends StatelessWidget {
-  const MyCircleDetailsScreen({super.key});
+  final String circleName;
+  final String imagePath;
+  final bool isOwner;
+  const MyCircleDetailsScreen({super.key, required this.circleName, required this.imagePath, required this.isOwner});
 
   @override
   Widget build(BuildContext context) {
-    final args = ModalRoute.of(context)!.settings.arguments as Map<String, dynamic>;
-    final circleName = args['circleName'] as String;
-    final imagePath = args['imagePath'] as String;
-    final isOwner = args['isOwner'] as bool;
+    
 
     return Scaffold(
       body: SafeArea(

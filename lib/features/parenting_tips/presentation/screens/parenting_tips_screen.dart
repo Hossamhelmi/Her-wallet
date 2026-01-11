@@ -5,14 +5,13 @@ import 'package:her_wallet/core/constants/app_colors.dart';
 import 'package:her_wallet/core/shared/widgets/just_name_appbar.dart';
 
 class ParentingTipsScreen extends StatelessWidget {
-  const ParentingTipsScreen({super.key});
+  final String? title;
+  final String? imageUrl;
+  const ParentingTipsScreen({super.key, this.title, this.imageUrl});
 
   @override
   Widget build(BuildContext context) {
-    final args =
-        ModalRoute.of(context)?.settings.arguments as Map<String, dynamic>?;
-        final title = args?['title'] as String?;
-        final imageUrl = args?['imageUrl'] as String?;
+   
     return Scaffold(
       appBar: JustNameAppBar(title: context.localizations.parentingTips),
       body: SingleChildScrollView(

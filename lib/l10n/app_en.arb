@@ -567,7 +567,10 @@
   "memberRole" : "member",
   "stores" : "Stores",
   "dresses" : "Dresses",
-  "topRatedVendors": "Top Rated Vendors"
+  "topRatedVendors": "Top Rated Vendors",
+  "gym":"Gym",
+  "marketplace": "Market Place",
+  "confirmPayment" : "Confirm Payment"
 
 
 }

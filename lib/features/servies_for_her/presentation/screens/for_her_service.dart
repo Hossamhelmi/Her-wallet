@@ -19,6 +19,7 @@ class ForHerServicesScreen extends StatelessWidget {
       context.localizations.transportation,
       context.localizations.foodDelivery,
       context.localizations.beauty,
+      context.localizations.gym,
     ];
   }
 
@@ -94,6 +95,7 @@ class ForHerServicesScreen extends StatelessWidget {
                       _buildTransportationSection(context),
                       _buildFoodDeliverySection(context),
                       _buildBeautySection(context),
+                      _buildGymSection(context),
                     ],
                   );
                 } else if (state.selectedFilter ==
@@ -106,6 +108,11 @@ class ForHerServicesScreen extends StatelessWidget {
                     context.localizations.beauty) {
                   return _buildBeautySection(context);
                 }
+                else if (state.selectedFilter ==
+                    context.localizations.gym) {
+                  return _buildGymSection(context);
+                }
+                 
                 return Container();
               },
             ),
@@ -123,18 +130,42 @@ class ForHerServicesScreen extends StatelessWidget {
         ServiceContainer(
           title: context.localizations.rideHailing,
           description: context.localizations.rideHailingTransportOptions,
-          imagePath: 'assets/images/womanRideHailing.jpg',
+          imagePath: 'assets/images/didi.png',
           buttonText: context.localizations.bookYourRide,
-          url: 'https://www.uber.com/fi/en/',
+          url: 'https://web.didiglobal.com/',
         ),
-        /*
+        
         ServiceContainer(
           title: 'Uber',
           description: context.localizations.rideHailingTransportOptions,
-          imagePath: 'assets/images/ride-hailing.jpg',
+          imagePath: 'assets/images/uber.png',
           buttonText: context.localizations.bookYourRide,
+          url: 'https://www.uber.com/eg/en/',
         ),
-        */
+        
+      ],
+    );
+  }
+    Widget _buildGymSection(BuildContext context) {
+    return ServiceList(
+      title: context.localizations.gym,
+      services: [
+        ServiceContainer(
+          title: 'Smart Gym',
+          description: 'Women\'s Fitness Club',
+          imagePath: 'assets/images/gym1.png',
+          buttonText: context.localizations.bookNow,
+          url: 'https://www.smart-gym.com/',
+        ),
+        
+        ServiceContainer(
+          title: 'Gold\'s Gym',
+          description: 'General Fitness Center',
+          imagePath: 'assets/images/gym2.png',
+          buttonText: context.localizations.bookNow,
+          url: 'https://goldsgymegypt.com/',
+        ),
+        
       ],
     );
   }
@@ -147,18 +178,19 @@ class ForHerServicesScreen extends StatelessWidget {
         ServiceContainer(
           title: context.localizations.foodDelivery,
           description: context.localizations.fastFoodDelivery,
-          imagePath: 'assets/images/womanDelivery.jpg',
+          imagePath: 'assets/images/eats.png',
           buttonText: context.localizations.orderNow,
-          url: 'https://www.talabat.com/egypt/restaurants',
+          url: 'https://www.ubereats.com/?srsltid=AfmBOorcqFijSuUryP-oP1MXy-OhWQxs5VTO_-Unu1rzepIQd_3yl-pB',
         ),
-        /*
+        
         ServiceContainer(
           title: 'Food Express',
           description: context.localizations.fastFoodDelivery,
-          imagePath: 'assets/images/food-delivery.jpg',
+          imagePath: 'assets/images/menus.png',
           buttonText: context.localizations.orderNow,
+          url: 'https://www.elmenus.com/',
         ),
-        */
+        
       ],
     );
   }
@@ -171,18 +203,19 @@ class ForHerServicesScreen extends StatelessWidget {
         ServiceContainer(
           title: context.localizations.beauty,
           description: context.localizations.beautyServices,
-          imagePath: 'assets/images/beauty-salons.jpg',
+          imagePath: 'assets/images/salon1.png',
           buttonText: context.localizations.bookNow,
           url: 'https://mahekbeauty.com/',
         ),
-        /*
+        
         ServiceContainer(
           title: 'Premium Salon',
           description: context.localizations.beautyServices,
-          imagePath: 'assets/images/beauty-salons.jpg',
+          imagePath: 'assets/images/salon2.png',
           buttonText: context.localizations.bookNow,
+          url: 'https://www.premiersalon.com/',
         ),
-        */
+        
       ],
     );
   }

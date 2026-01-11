@@ -79,8 +79,7 @@ class BalanceSection extends StatelessWidget {
                         size: 24.w,
                       ),
                       onPressed: () {
-                        Navigator.pushNamed(context, AppRoutes.topUpBalance,
-                            arguments: {"isSendMoney": false});
+                        Navigator.pushNamed(context, AppRoutes.gifts);
                       },
                       padding: EdgeInsets.zero,
                     ),

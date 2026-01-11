@@ -42,10 +42,12 @@ class AppLocalizationsEn extends AppLocalizations {
   String get startYourJourney => 'Start your journey';
 
   @override
-  String get joinApp => 'Join the HerWallet community to manage your money with ease and security';
+  String get joinApp =>
+      'Join the HerWallet community to manage your money with ease and security';
 
   @override
-  String get agreeTerms => 'I agree to the Terms & Conditions and Privacy Policy';
+  String get agreeTerms =>
+      'I agree to the Terms & Conditions and Privacy Policy';
 
   @override
   String get password => 'Password';
@@ -60,10 +62,12 @@ class AppLocalizationsEn extends AppLocalizations {
   String get forgotYourPassword => 'Forgot your password';
 
   @override
-  String get passwordInstructions => 'We recommend using at least 8 characters, with numbers or symbols.';
+  String get passwordInstructions =>
+      'We recommend using at least 8 characters, with numbers or symbols.';
 
   @override
-  String get forgotPasswordLine => 'Enter your phone number or email and we\'ll send you a code to reset your password.';
+  String get forgotPasswordLine =>
+      'Enter your phone number or email and we\'ll send you a code to reset your password.';
 
   @override
   String get newPassword => 'New Password';
@@ -78,13 +82,15 @@ class AppLocalizationsEn extends AppLocalizations {
   String get enterConfirmPassword => 'Enter confirm password';
 
   @override
-  String get newPasswordLine => 'Now you can choose a new password for your account Make sure it\'s strong, yet easy to remember.';
+  String get newPasswordLine =>
+      'Now you can choose a new password for your account Make sure it\'s strong, yet easy to remember.';
 
   @override
   String get enterVerificationCode => 'Enter Verification Code';
 
   @override
-  String get verificationCodeLine => 'We\'ve sent you a 5-digit code to your phone or email.Please enter it here so we can continue';
+  String get verificationCodeLine =>
+      'We\'ve sent you a 5-digit code to your phone or email.Please enter it here so we can continue';
 
   @override
   String get rememberMe => 'Remember me';
@@ -99,7 +105,8 @@ class AppLocalizationsEn extends AppLocalizations {
   String get resetPasswordSuccesfully => 'Password Reset Successful';
 
   @override
-  String get resetSuccessLine => 'Go ahead and log in to enjoy HerWallet with confidence.';
+  String get resetSuccessLine =>
+      'Go ahead and log in to enjoy HerWallet with confidence.';
 
   @override
   String get confirmYourCode => 'Confirm';
@@ -210,7 +217,8 @@ class AppLocalizationsEn extends AppLocalizations {
   String get circleDescription => 'Circle Description';
 
   @override
-  String get describeYourCircle => 'Write short description about your circle...';
+  String get describeYourCircle =>
+      'Write short description about your circle...';
 
   @override
   String get category => 'Category';
@@ -240,7 +248,8 @@ class AppLocalizationsEn extends AppLocalizations {
   String get circlePublicDescription => 'Anyone can join and \nparticipate';
 
   @override
-  String get circlePrivatePrivateDescription => 'Only invited members can \njoin and view comments';
+  String get circlePrivatePrivateDescription =>
+      'Only invited members can \njoin and view comments';
 
   @override
   String get myPosts => 'My Posts';
@@ -390,13 +399,15 @@ class AppLocalizationsEn extends AppLocalizations {
   String get secureTransactions => '100% Secure Transactions';
 
   @override
-  String get advancedEncryption => 'We use advanced encryption to keep your data and money secure.';
+  String get advancedEncryption =>
+      'We use advanced encryption to keep your data and money secure.';
 
   @override
   String get topUpSuccessful => 'Top-Up Successful!';
 
   @override
-  String get topUpSuccessMessage => 'EGP 500.00 has been added to your wallet balance.';
+  String get topUpSuccessMessage =>
+      'EGP 500.00 has been added to your wallet balance.';
 
   @override
   String get transactionId => 'Transaction ID:';
@@ -573,13 +584,16 @@ class AppLocalizationsEn extends AppLocalizations {
   String get enjoyMonthlyDelivery => 'Enjoy Monthly Delivery';
 
   @override
-  String get selectWhatMatchesYourIntersets => 'Select what matches\n your interests';
+  String get selectWhatMatchesYourIntersets =>
+      'Select what matches\n your interests';
 
   @override
-  String get goldSilverOrBronze => 'Gold, Silver or Bronze\n Flexiable to hit your needs';
+  String get goldSilverOrBronze =>
+      'Gold, Silver or Bronze\n Flexiable to hit your needs';
 
   @override
-  String get yourBoxArrives => 'Your Box Arrives at Your\n Doorstep  Every Month';
+  String get yourBoxArrives =>
+      'Your Box Arrives at Your\n Doorstep  Every Month';
 
   @override
   String get subscriptionBenefits => 'Subscription Benefits';
@@ -702,7 +716,8 @@ class AppLocalizationsEn extends AppLocalizations {
   String get skinCareBoxTitle => 'Skin Care Box';
 
   @override
-  String get skinCareBoxDescription => 'Enjoy a monthly delivery of curated skincare products tailored to your needs. Each box includes a selection of high-quality items designed to nourish and rejuvenate your skin.';
+  String get skinCareBoxDescription =>
+      'Enjoy a monthly delivery of curated skincare products tailored to your needs. Each box includes a selection of high-quality items designed to nourish and rejuvenate your skin.';
 
   @override
   String get subscribingToPlan => 'Subscribing to plan:';
@@ -714,7 +729,8 @@ class AppLocalizationsEn extends AppLocalizations {
   String get personalInformation => 'Personal Information';
 
   @override
-  String get uploadImageDescription => 'You can upload an image in JPEG or PNG format';
+  String get uploadImageDescription =>
+      'You can upload an image in JPEG or PNG format';
 
   @override
   String get email => 'E-Mail';
@@ -813,19 +829,23 @@ class AppLocalizationsEn extends AppLocalizations {
   String get skinCareRoutine => 'Skin Care Routine';
 
   @override
-  String get skinCareTips => 'Tips for maintaining healthy skin and a glowing complexion.';
+  String get skinCareTips =>
+      'Tips for maintaining healthy skin and a glowing complexion.';
 
   @override
   String get quickHealthyMeals => 'Quick to Prepare Healthy Meals';
 
   @override
-  String get healthyMealsDescription => 'Healthy meals that are quick to prepare for busy moms.';
+  String get healthyMealsDescription =>
+      'Healthy meals that are quick to prepare for busy moms.';
 
   @override
-  String get earlyReadingSkills => 'How to Develop Early Reading Skills in Children';
+  String get earlyReadingSkills =>
+      'How to Develop Early Reading Skills in Children';
 
   @override
-  String get readingSkillsDescription => 'Read about the importance of early reading skills and how to encourage your child to develop a love for books.';
+  String get readingSkillsDescription =>
+      'Read about the importance of early reading skills and how to encourage your child to develop a love for books.';
 
   @override
   String get articleDate => 'July 12, 2023';
@@ -834,13 +854,15 @@ class AppLocalizationsEn extends AppLocalizations {
   String get blogDetails => 'Blog Details';
 
   @override
-  String get developStrongBond => 'How to Develop a Strong Bond with Your Child';
+  String get developStrongBond =>
+      'How to Develop a Strong Bond with Your Child';
 
   @override
   String get sarahAlHassan => 'Sarah al-Hassan';
 
   @override
-  String get bondingDescription => 'Read this article to learn effective strategies for building a strong emotional connection with your child, fostering trust, and enhancing communication.';
+  String get bondingDescription =>
+      'Read this article to learn effective strategies for building a strong emotional connection with your child, fostering trust, and enhancing communication.';
 
   @override
   String get similarArticles => 'Similar Articles';
@@ -984,7 +1006,8 @@ class AppLocalizationsEn extends AppLocalizations {
   String get cashOnDelivery => 'Cash on Delivery';
 
   @override
-  String get secureTransaction => 'All Transactions are encrypted and 100% secure';
+  String get secureTransaction =>
+      'All Transactions are encrypted and 100% secure';
 
   @override
   String get confirmOrder => 'Confirm Order';
@@ -1107,7 +1130,8 @@ class AppLocalizationsEn extends AppLocalizations {
   String get successfulPayment => 'Payment Successful!';
 
   @override
-  String get paymentCompletedSuccessfully => 'Your payment has been completed successfully.';
+  String get paymentCompletedSuccessfully =>
+      'Your payment has been completed successfully.';
 
   @override
   String get transactionReference => 'Transaction Reference';
@@ -1149,19 +1173,22 @@ class AppLocalizationsEn extends AppLocalizations {
   String get onboardingTitle1 => 'Purse... Your way.';
 
   @override
-  String get onboardingDescription1 => 'Everything you need to manage your money easily and safely... In a sleek app designed specifically to take care of your details.';
+  String get onboardingDescription1 =>
+      'Everything you need to manage your money easily and safely... In a sleek app designed specifically to take care of your details.';
 
   @override
   String get onboardingTitle2 => ' All your services in one place';
 
   @override
-  String get onboardingDescription2 => 'Pay your bills, shop for yourself and your children\'s needs, and choose monthly boxes that suit your taste.';
+  String get onboardingDescription2 =>
+      'Pay your bills, shop for yourself and your children\'s needs, and choose monthly boxes that suit your taste.';
 
   @override
   String get onboardingTitle3 => 'Find your circle';
 
   @override
-  String get onboardingDescription3 => 'Join women like you, share your story, and feel truly supported';
+  String get onboardingDescription3 =>
+      'Join women like you, share your story, and feel truly supported';
 
   @override
   String get animalsCircle => 'Animals';
@@ -1176,7 +1203,8 @@ class AppLocalizationsEn extends AppLocalizations {
   String get twoHoursAgo => '2 hours ago';
 
   @override
-  String get puppyPostContent => 'Hi everyone! I just adopted a new puppy and I\'m so excited to share this with you all. He\'s a little ball of energy and love!';
+  String get puppyPostContent =>
+      'Hi everyone! I just adopted a new puppy and I\'m so excited to share this with you all. He\'s a little ball of energy and love!';
 
   @override
   String get myOrders => 'My Orders';
@@ -1257,10 +1285,12 @@ class AppLocalizationsEn extends AppLocalizations {
   String get parentingTips => 'Parenting Tips';
 
   @override
-  String get buildingTrustAndCommunication => 'Building Trust and Communication';
+  String get buildingTrustAndCommunication =>
+      'Building Trust and Communication';
 
   @override
-  String get effectiveParentingDescription => 'Effective parenting involves creating an environment where children feel safe to express themselves. This includes active listening, showing empathy, and maintaining consistent boundaries.';
+  String get effectiveParentingDescription =>
+      'Effective parenting involves creating an environment where children feel safe to express themselves. This includes active listening, showing empathy, and maintaining consistent boundaries.';
 
   @override
   String get termsAndConditions => 'Terms and Conditions';
@@ -1269,31 +1299,36 @@ class AppLocalizationsEn extends AppLocalizations {
   String get introduction => '1. Introduction';
 
   @override
-  String get introductionContent => 'These terms and conditions govern your use of our application. By using our app, you agree to comply with and be bound by these terms.';
+  String get introductionContent =>
+      'These terms and conditions govern your use of our application. By using our app, you agree to comply with and be bound by these terms.';
 
   @override
   String get userObligations => '2. User Obligations';
 
   @override
-  String get userObligationsContent => 'You agree to use the application in compliance with all applicable laws and regulations. You are responsible for maintaining the confidentiality of your account information.';
+  String get userObligationsContent =>
+      'You agree to use the application in compliance with all applicable laws and regulations. You are responsible for maintaining the confidentiality of your account information.';
 
   @override
   String get limitationOfLiability => '3. Limitation of Liability';
 
   @override
-  String get limitationOfLiabilityContent => 'Our liability is limited to the maximum extent permitted by law. We shall not be liable for any indirect, incidental, or consequential damages.';
+  String get limitationOfLiabilityContent =>
+      'Our liability is limited to the maximum extent permitted by law. We shall not be liable for any indirect, incidental, or consequential damages.';
 
   @override
   String get modifications => '4. Modifications';
 
   @override
-  String get modificationsContent => 'We reserve the right to modify these terms at any time. Changes will be effective immediately upon posting in the application.';
+  String get modificationsContent =>
+      'We reserve the right to modify these terms at any time. Changes will be effective immediately upon posting in the application.';
 
   @override
   String get termination => '5. Termination';
 
   @override
-  String get terminationContent => 'We may terminate or suspend your access to the application at any time, with or without cause, and with or without notice.';
+  String get terminationContent =>
+      'We may terminate or suspend your access to the application at any time, with or without cause, and with or without notice.';
 
   @override
   String get mentorship => 'Mentorship';
@@ -1332,31 +1367,36 @@ class AppLocalizationsEn extends AppLocalizations {
   String get privacyIntroduction => '1. Introduction';
 
   @override
-  String get privacyIntroductionContent => 'This privacy policy outlines how we handle your personal information when you use our application. We are committed to protecting your privacy and ensuring the security of your data.';
+  String get privacyIntroductionContent =>
+      'This privacy policy outlines how we handle your personal information when you use our application. We are committed to protecting your privacy and ensuring the security of your data.';
 
   @override
   String get informationCollection => '2. Information Collection';
 
   @override
-  String get informationCollectionContent => 'We may collect personal information from you when you use our application, including but not limited to your name, email address, and usage data. This information is collected only with your consent.';
+  String get informationCollectionContent =>
+      'We may collect personal information from you when you use our application, including but not limited to your name, email address, and usage data. This information is collected only with your consent.';
 
   @override
   String get informationUse => '3. Information Use';
 
   @override
-  String get informationUseContent => 'We use your information to provide and improve our services, communicate with you, and ensure the security of our application. Your data will never be sold to third parties.';
+  String get informationUseContent =>
+      'We use your information to provide and improve our services, communicate with you, and ensure the security of our application. Your data will never be sold to third parties.';
 
   @override
   String get dataSecurity => '4. Data Security';
 
   @override
-  String get dataSecurityContent => 'We implement appropriate security measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction.';
+  String get dataSecurityContent =>
+      'We implement appropriate security measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction.';
 
   @override
   String get contactUs => '5. Contact Us';
 
   @override
-  String get contactUsContent => 'If you have any questions about this Privacy Policy, please contact us through the app or our official support channels.';
+  String get contactUsContent =>
+      'If you have any questions about this Privacy Policy, please contact us through the app or our official support channels.';
 
   @override
   String get shippingInformation => 'Shipping Information';
@@ -1410,7 +1450,8 @@ class AppLocalizationsEn extends AppLocalizations {
   String get transportationServices => 'Transportation Services';
 
   @override
-  String get rideHailingTransportOptions => 'Quick and reliable transportation options';
+  String get rideHailingTransportOptions =>
+      'Quick and reliable transportation options';
 
   @override
   String get bookYourRide => 'Book Your Ride';
@@ -1485,7 +1526,8 @@ class AppLocalizationsEn extends AppLocalizations {
   String get bookingSessionWith => 'Booking session with';
 
   @override
-  String get coachSpecialty => 'Specialist in women empowerment and\nleadership development';
+  String get coachSpecialty =>
+      'Specialist in women empowerment and\nleadership development';
 
   @override
   String get sessionPrice => 'EGP 300/Session';
@@ -1509,19 +1551,23 @@ class AppLocalizationsEn extends AppLocalizations {
   String get confirmCancellation => 'Confirm Cancellation';
 
   @override
-  String get areYouSureCancelSubscription => 'Are you sure you want to cancel your subscription? This will result in the following:';
+  String get areYouSureCancelSubscription =>
+      'Are you sure you want to cancel your subscription? This will result in the following:';
 
   @override
   String get cancelingAccumulatedPoints => 'Canceling all accumulated points.';
 
   @override
-  String get losingExclusiveAccess => 'Losing exclusive access to premium features.';
+  String get losingExclusiveAccess =>
+      'Losing exclusive access to premium features.';
 
   @override
-  String get subscriptionCanceledImmediately => 'Your subscription will be canceled immediately.';
+  String get subscriptionCanceledImmediately =>
+      'Your subscription will be canceled immediately.';
 
   @override
-  String get selectPreferredPauseDuration => 'Select the preferred pause duration';
+  String get selectPreferredPauseDuration =>
+      'Select the preferred pause duration';
 
   @override
   String get threeMonths => '3 Months';
@@ -1542,10 +1588,12 @@ class AppLocalizationsEn extends AppLocalizations {
   String get importantNotes => 'Important Notes';
 
   @override
-  String get subscriptionPausedForDuration => '- Your subscription will be paused for the selected duration.';
+  String get subscriptionPausedForDuration =>
+      '- Your subscription will be paused for the selected duration.';
 
   @override
-  String get resumeSubscriptionAnytime => '- You can resume your subscription at any time.';
+  String get resumeSubscriptionAnytime =>
+      '- You can resume your subscription at any time.';
 
   @override
   String get confirmPause => 'Confirm Pause';
@@ -1578,7 +1626,8 @@ class AppLocalizationsEn extends AppLocalizations {
   String get orderPlaced => 'Your Order has been placed successfully';
 
   @override
-  String get orderProcessing => 'Thank you for your purchase. Your order is being processed and will be shipped soon.';
+  String get orderProcessing =>
+      'Thank you for your purchase. Your order is being processed and will be shipped soon.';
 
   @override
   String get amount => 'Amount';
@@ -1599,7 +1648,8 @@ class AppLocalizationsEn extends AppLocalizations {
   String get confirmNewPassword => 'Confirm New Password';
 
   @override
-  String get passwordValidation => 'Password must be at least 8 characters long';
+  String get passwordValidation =>
+      'Password must be at least 8 characters long';
 
   @override
   String get logoutConfirmation => 'Are you sure you want to logOut?';
@@ -1620,10 +1670,12 @@ class AppLocalizationsEn extends AppLocalizations {
   String get babyEssentials => 'baby essentials';
 
   @override
-  String get howToDevelopEarlyReadingSkills => 'How to Develop Early Reading Skills in Children';
+  String get howToDevelopEarlyReadingSkills =>
+      'How to Develop Early Reading Skills in Children';
 
   @override
-  String get readAboutImportanceOfEarlyReading => 'Read about the importance of early reading skills and how to encourage your child to develop a love for books.';
+  String get readAboutImportanceOfEarlyReading =>
+      'Read about the importance of early reading skills and how to encourage your child to develop a love for books.';
 
   @override
   String get fastFoodDelivery => 'Fast food delivery';
@@ -1669,4 +1721,13 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get topRatedVendors => 'Top Rated Vendors';
+
+  @override
+  String get gym => 'Gym';
+
+  @override
+  String get marketplace => 'Market Place';
+
+  @override
+  String get confirmPayment => 'Confirm Payment';
 }

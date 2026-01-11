@@ -18,8 +18,10 @@ import 'package:her_wallet/features/edit_profile/presentation/screens/edit_profi
 import 'package:her_wallet/features/favourites/presentation/screens/favorites_screen.dart';
 import 'package:her_wallet/features/adds_hub/presentation/screens/adds_hub_screen.dart';
 import 'package:her_wallet/features/adds_hub/presentation/cubit/her_souq_cubit.dart';
+import 'package:her_wallet/features/gifts/gifts_screen.dart';
 import 'package:her_wallet/features/home_layout/presentation/cubits/home_cubit.dart';
 import 'package:her_wallet/features/home_layout/presentation/screens/home_layout.dart';
+import 'package:her_wallet/features/installments/instalments.dart';
 import 'package:her_wallet/features/member_management/presentation/screens/member_management_screen.dart';
 import 'package:her_wallet/features/my_circle_details/presentation/screens/my_circle_details_screen.dart';
 import 'package:her_wallet/features/my_orders/presentation/cubit/my_orders_cubit.dart';
@@ -39,6 +41,7 @@ import 'package:her_wallet/features/product_details/presentation/screens/product
 import 'package:her_wallet/features/recent_payments/presentation/screens/recent_payments_screen.dart';
 import 'package:her_wallet/features/recent_transactions/presentation/screens/recent_transactions_screen.dart';
 import 'package:her_wallet/features/saving_goals/presentation/screens/saving_goals_screen.dart';
+import 'package:her_wallet/features/saving_goals_payment.dart/saving_goals_payment_screen.dart';
 import 'package:her_wallet/features/servies_for_her/presentation/screens/for_her_service.dart';
 import 'package:her_wallet/features/servies_for_her/presentation/cubit/for_her_service_cubit.dart';
 import 'package:her_wallet/features/subscription/presentation/cubits/subscription_cubit.dart';
@@ -55,6 +58,7 @@ import '../../features/auth/presentation/login/screens/login_screen.dart';
 
 class AppRoutes {
   static const String splash = '/';
+  static const String unAvailable = '/unavailable';
   static const String home = '/home';
   static const String onboarding = '/onboarding';
   static const String login = '/login';
@@ -102,7 +106,11 @@ class AppRoutes {
   static const String savingGoals = '/saving-goals';
   static const String recentPayments = '/recent-payments';
   static const String notifications = '/notifications';
+  static const String gifts = '/gifts';
+  static const String installments = '/installments';
+  static const String savingGoalsPayment = '/saving-goals-payment';
 
+  /*
   static Map<String, WidgetBuilder> get routes {
     return {
       home:
@@ -185,4 +193,230 @@ class AppRoutes {
       // Add more routes here
     };
   }
+*/
+ static Route<dynamic>? onGenerateRoute(RouteSettings settings) {
+    switch (settings.name) {
+      case unAvailable:
+        return  MaterialPageRoute(builder: (context) => const UnAvailableScreen());
+      case splash:
+        return pageRouteBuilder(const SplashScreen());
+      case onboarding:
+        return pageRouteBuilder(const OnboardingScreen());
+      case login:
+        return pageRouteBuilder(const LoginScreen());
+      case signup:
+        return pageRouteBuilder(const SignUpScreen());
+      case forgotPassword:
+        return pageRouteBuilder(const ForgotPasswordScreen());
+      case enterVerification:
+        return pageRouteBuilder(const EnterVerificationScreen());
+      case newPassword:
+        return pageRouteBuilder(NewPasswordScreen());
+      case resetSuccess:
+        return pageRouteBuilder(const ResetSuccessScreen());
+      case topUpBalance:
+      final args = settings.arguments as Map<String, dynamic>?;
+      bool isSendMoney = args != null && args['isSendMoney'] == true;
+        return pageRouteBuilder(TopUpBalanceScreen(isSendMoney: isSendMoney));
+      case topUpDetails:
+        return pageRouteBuilder(TopUpDetailsScreen());
+      case recentTransactions:
+        return pageRouteBuilder(RecentTransactionsScreen());
+      case newCircle:
+        return pageRouteBuilder(NewCircleScreen());
+      case myCircleDetails:
+      final argsCircle = settings.arguments as Map<String, dynamic>;
+      final circleName = argsCircle['circleName'] as String;
+      final imagePath = argsCircle['imagePath'] as String;
+      final isOwner = argsCircle['isOwner'] as bool;
+        return pageRouteBuilder(MyCircleDetailsScreen(
+          circleName: circleName,
+          imagePath: imagePath,
+          isOwner: isOwner,
+        ));
+      case createPost:
+        return pageRouteBuilder(CreatePostScreen());
+      case postComments:
+        return pageRouteBuilder(PostCommentsScreen());
+      case memberManagement:
+        return pageRouteBuilder(MemberManagementScreen());
+      case subscriptionDetails:
+      final argsSubscription = settings.arguments as Map<String, dynamic>?;
+      final title = argsSubscription?['title'] ?? '';
+      final imagePath = argsSubscription?['imagePath'] ?? '';
+      return pageRouteBuilder(SubscriptionDetailsScreen(
+        title: title,
+        imagePath: imagePath,
+      ));
+      case completeSubscription:
+        return pageRouteBuilder(const CompleteSubscriptionScreen());
+      case productDetails:
+      final argsProduct = settings.arguments as Map<String, dynamic>?;
+      final title = argsProduct?['title'] ?? '';
+    final imageUrl = argsProduct?['imageUrl'] ?? '';
+    final price = argsProduct?['price'] ?? '850 EGP';
+    final fromAddsHub = argsProduct?['fromAddsHub'] ?? false;
+
+        return pageRouteBuilder(ProductDetailsScreen(
+          title: title,
+          imageUrl: imageUrl,
+          price: price,
+          fromAddsHub: fromAddsHub,
+        ));
+
+      case orderReview:
+        return pageRouteBuilder(OrderReviewScreen());
+      case orderPayment:
+        return pageRouteBuilder(OrderPaymentScreen());
+      case herSouq:
+        return pageRouteBuilder(
+          BlocProvider(
+            create: (context) => HerSouqCubit(),
+            child: const AddsHubScreen(),
+          ),
+        );
+      case womenEmpowerment:
+        return pageRouteBuilder(
+          BlocProvider(
+            create: (context) => WomenEmpowermentCubit(),
+            child: const WomenEmpowermentScreen(),
+          ),
+        );
+      case addProduct:
+        return pageRouteBuilder(AddProductScreen());
+      case brideZone:
+        return pageRouteBuilder(
+          BlocProvider(
+            create: (context) => BrideZoneCubit(),
+            child: BrideZoneScreen(),
+          ),
+        );
+      case babyHub:
+        return pageRouteBuilder(
+          BlocProvider(
+            create: (context) => BabyHubCubit(),
+            child: const BabyHubScreen(),
+          ),
+        );
+      case parentingTips:
+      final argsTips = settings.arguments as Map<String, dynamic>?;
+      final titleTip = argsTips?['title'] as String?;
+      final imageUrl = argsTips?['imageUrl'] as String?;
+      return pageRouteBuilder(ParentingTipsScreen(
+        title: titleTip,
+        imageUrl: imageUrl,
+      ));
+      case forHerServices:
+        return pageRouteBuilder(
+          BlocProvider(
+            create: (context) => ForHerServiceCubit(),
+            child: const ForHerServicesScreen(),
+          ),
+        );
+      case paymentServices:
+        return pageRouteBuilder(PaymentServicesScreen());
+      case walletAndPayments:
+        return pageRouteBuilder(WalletAndPaymentsScreen());
+      case myOrders:
+        return pageRouteBuilder(
+          BlocProvider(
+            create: (context) => MyOrdersCubit(),
+            child: MyOrdersScreen(),
+          ),
+        );
+      case orderDetails:
+        return pageRouteBuilder(const OrderDetailsScreen());
+      case favorites:
+        return pageRouteBuilder(const FavoritesScreen());
+      case editProfile:
+        return pageRouteBuilder(const EditProfileScreen());
+      case subscriptionBoxes:
+        return pageRouteBuilder(
+          BlocProvider(
+            create: (context) => SubscriptionCubit(),
+            child: SubscriptionBoxesScreen(),
+          ),
+        );
+      case privacyPolicy:
+        return pageRouteBuilder(const PrivacyPolicyScreen());
+      case termsAndConditions:
+        return pageRouteBuilder(const TermsAndConditionsScreen());
+      case orderConfirmation:
+        return pageRouteBuilder(OrderConfirmationScreen());
+      case blog:
+        return pageRouteBuilder(const BlogScreen());
+      case blogDetails:
+        return pageRouteBuilder(const BlogDetailsScreen());
+      case savingGoals:
+        return pageRouteBuilder(SavingGoalsScreen());
+      case recentPayments:
+        return pageRouteBuilder(RecentPaymentsScreen());
+      case notifications:
+        return pageRouteBuilder(NotificationsScreen());
+      case home:
+        return pageRouteBuilder(
+          BlocProvider(
+            create: (context) => HomeLayoutCubit(),
+            child: HomeLayout(),
+          ),
+        );
+      case gifts:
+        return pageRouteBuilder(const GiftsScreen());
+      case installments:
+        return pageRouteBuilder(const InstallmentsScreen());
+      case savingGoalsPayment:
+      final argsSaving = settings.arguments as Map<String, dynamic>?;
+      final titleSaving = argsSaving?['title'] ?? 'Saving Goals Payment';
+        return pageRouteBuilder(SavingGoalsPaymentScreen(title: titleSaving));
+      default:
+        return null;
+    }
+  }
+
+
+  static PageRouteBuilder<dynamic> pageRouteBuilder(Widget screen) {
+    return PageRouteBuilder(
+
+        transitionDuration: Duration(milliseconds: 500),
+
+        transitionsBuilder: (context, animation, secondaryAnimation, child) {
+          const begin = Offset(-1.0, 0);
+          const end = Offset.zero;
+          const curve = Curves.easeInOut;
+
+          var tween = Tween(begin: begin, end: end).chain(CurveTween(curve: curve));
+          var offsetAnimation = animation.drive(tween);
+
+          return SlideTransition(
+            position: offsetAnimation,
+            child: child,
+          );
+        },
+        pageBuilder: (context, animation, secondaryAnimation) => screen,
+      );
+  }
+
+
+
+
+
+
 }
+
+class UnAvailableScreen extends StatelessWidget {
+  const UnAvailableScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Unavailable'),
+      ),
+      body: const Center(
+        child: Text('App is currently unavailable.'),
+      ),
+    );
+  }
+  
+}
+

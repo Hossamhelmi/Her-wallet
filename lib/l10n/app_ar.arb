@@ -571,6 +571,11 @@
   "memberRole" : "عضو",
   "stores" : "المتاجر",
   "dresses" : "الفساتين",
-  "topRatedVendors": "المتاجر الاعلى تقييم"
+  "topRatedVendors": "المتاجر الاعلى تقييم",
+  "gym" : "الجيم",
+  "marketplace": "المتجر",
+  "confirmPayment" : "تأكيد الدفع"
+
+
 
 }

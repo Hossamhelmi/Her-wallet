@@ -55,95 +55,102 @@ class SavingSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      margin: EdgeInsets.symmetric(horizontal: 18.w),
-      child: Material(
-        elevation: 2,
-        borderRadius: BorderRadius.circular(20.r),
-        shadowColor: AppColors.backgroundSecondary,
-        child: Container(
-          padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 8.h),
-          constraints: BoxConstraints(minHeight: 70.h),
-          decoration: BoxDecoration(
-            color: AppColors.surface,
-            borderRadius: BorderRadius.circular(20.r),
-          ),
-          child: Column(
-            children: [
-              Row(
-                children: [
-                  Expanded(
-                    child: Text(
-                      title,
+    return GestureDetector(
+      onTap: () {
+        Navigator.pushNamed(context, AppRoutes.savingGoalsPayment, arguments: {
+          'title': title,
+        });
+      },
+      child: Container(
+        margin: EdgeInsets.symmetric(horizontal: 18.w),
+        child: Material(
+          elevation: 2,
+          borderRadius: BorderRadius.circular(20.r),
+          shadowColor: AppColors.backgroundSecondary,
+          child: Container(
+            padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 8.h),
+            constraints: BoxConstraints(minHeight: 70.h),
+            decoration: BoxDecoration(
+              color: AppColors.surface,
+              borderRadius: BorderRadius.circular(20.r),
+            ),
+            child: Column(
+              children: [
+                Row(
+                  children: [
+                    Expanded(
+                      child: Text(
+                        title,
+                        style: TextStyle(
+                          fontSize: 16.sp,
+                          fontWeight: FontWeight.w700,
+                          color: AppColors.textPrimary,
+                        ),
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
+                      ),
+                    ),
+                    SizedBox(width: 8.w),
+                    Text(
+                      date,
                       style: TextStyle(
-                        fontSize: 16.sp,
+                        fontSize: 12.sp,
+                        fontWeight: FontWeight.w400,
+                        color: AppColors.textSecondary,
+                      ),
+                    ),
+                  ],
+                ),
+                SizedBox(height: 12.h),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      total,
+                      style: TextStyle(
+                        fontSize: 14.sp,
                         fontWeight: FontWeight.w700,
-                        color: AppColors.textPrimary,
+                        color: AppColors.appBar,
                       ),
-                      maxLines: 1,
-                      overflow: TextOverflow.ellipsis,
                     ),
-                  ),
-                  SizedBox(width: 8.w),
-                  Text(
-                    date,
-                    style: TextStyle(
-                      fontSize: 12.sp,
-                      fontWeight: FontWeight.w400,
-                      color: AppColors.textSecondary,
-                    ),
-                  ),
-                ],
-              ),
-              SizedBox(height: 12.h),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text(
-                    total,
-                    style: TextStyle(
-                      fontSize: 14.sp,
-                      fontWeight: FontWeight.w700,
-                      color: AppColors.appBar,
-                    ),
-                  ),
-
-                  Flexible(
-                    child: Text.rich(
-                      TextSpan(
-                        children: [
-                          TextSpan(
-                            text: remaining,
-                            style: TextStyle(
-                              fontSize: 12.sp,
-                              fontWeight: FontWeight.w700,
-                              color: AppColors.appBar,
+      
+                    Flexible(
+                      child: Text.rich(
+                        TextSpan(
+                          children: [
+                            TextSpan(
+                              text: remaining,
+                              style: TextStyle(
+                                fontSize: 12.sp,
+                                fontWeight: FontWeight.w700,
+                                color: AppColors.appBar,
+                              ),
                             ),
-                          ),
-                          TextSpan(
-                            text: ' ${context.localizations.remaining} $total',
-                            style: TextStyle(
-                              fontSize: 10.sp,
-                              fontWeight: FontWeight.w300,
-                              color: AppColors.textSecondary,
+                            TextSpan(
+                              text: ' ${context.localizations.remaining} $total',
+                              style: TextStyle(
+                                fontSize: 10.sp,
+                                fontWeight: FontWeight.w300,
+                                color: AppColors.textSecondary,
+                              ),
                             ),
-                          ),
-                        ],
+                          ],
+                        ),
+                        textAlign: TextAlign.end,
                       ),
-                      textAlign: TextAlign.end,
                     ),
-                  ),
-                ],
-              ),
-              SizedBox(height: 12.h),
-              LinearProgressIndicator(
-                backgroundColor: AppColors.grey200,
-                valueColor: AlwaysStoppedAnimation<Color>(AppColors.appBar),
-                value: progress,
-                borderRadius: BorderRadius.circular(20.r),
-                minHeight: 6.h,
-              ),
-            ],
+                  ],
+                ),
+                SizedBox(height: 12.h),
+                LinearProgressIndicator(
+                  backgroundColor: AppColors.grey200,
+                  valueColor: AlwaysStoppedAnimation<Color>(AppColors.appBar),
+                  value: progress,
+                  borderRadius: BorderRadius.circular(20.r),
+                  minHeight: 6.h,
+                ),
+              ],
+            ),
           ),
         ),
       ),

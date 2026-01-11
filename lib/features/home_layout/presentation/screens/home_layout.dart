@@ -133,14 +133,39 @@ class HomeLayout extends StatelessWidget {
 
           centerTitle: false,
           title: Padding(
-            padding: EdgeInsets.only(left: 35.0.w),
-            child: Text(
-              context.localizations.womensBazar,
-              style: TextStyle(
-                fontSize: 20,
-                fontWeight: FontWeight.w600,
-                color: Colors.white,
-              ),
+            padding: EdgeInsets.only(left: 0.0.w),
+            child: Column(
+              children: [
+                Text.rich(
+                  TextSpan(
+                    children: [
+                      TextSpan(
+                        text: context.localizations.womensBazar,
+                        style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.w600,
+                          color: Colors.white,
+                        ),
+                      ),
+                      TextSpan(
+                        text: '(${context.localizations.marketplace})',
+                        style: TextStyle(
+                          fontSize: 15,
+                          fontWeight: FontWeight.w400,
+                          color: Colors.white,
+                        ),
+                      ),
+                     
+                    ],
+                  ),
+                  style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.w600,
+                    color: Colors.white,
+                  ),
+                ),
+                
+              ],
             ),
           ),
                leading: Padding(
