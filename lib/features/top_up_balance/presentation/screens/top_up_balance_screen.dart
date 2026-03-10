@@ -19,7 +19,7 @@ class TopUpBalanceScreen extends StatefulWidget {
 }
 
 class _TopUpBalanceScreenState extends State<TopUpBalanceScreen> {
-  String _selectedMethod = 'bank_card';
+  // String _selectedMethod = 'bank_card';
   int? _selectedAmount;
   final TextEditingController _amountController = TextEditingController();
   final List<int> _predefinedAmounts = [100, 150, 200, 250, 500, 1000];
@@ -29,12 +29,12 @@ class _TopUpBalanceScreenState extends State<TopUpBalanceScreen> {
     _amountController.dispose();
     super.dispose();
   }
-
+/* 
   void _onMethodSelected(String method) {
     setState(() {
       _selectedMethod = method;
     });
-  }
+  } */
 
   void _onAmountSelected(amount) {
     setState(() {

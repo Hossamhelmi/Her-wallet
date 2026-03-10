@@ -110,7 +110,7 @@ class AppRoutes {
   static const String installments = '/installments';
   static const String savingGoalsPayment = '/saving-goals-payment';
 
-  /*
+  
   static Map<String, WidgetBuilder> get routes {
     return {
       home:
@@ -126,17 +126,17 @@ class AppRoutes {
       enterVerification: (context) => const EnterVerificationScreen(),
       newPassword: (context) => NewPasswordScreen(),
       resetSuccess: (context) => const ResetSuccessScreen(),
-      topUpBalance: (context) => const TopUpBalanceScreen(),
+      topUpBalance: (context) => const TopUpBalanceScreen(isSendMoney: false,),
       topUpDetails: (context) => TopUpDetailsScreen(),
       recentTransactions: (context) => RecentTransactionsScreen(),
       newCircle: (context) => NewCircleScreen(),
-      myCircleDetails: (context) => MyCircleDetailsScreen(),
+      myCircleDetails: (context) => MyCircleDetailsScreen(circleName: '', imagePath: '', isOwner: false,),
       createPost: (context) => CreatePostScreen(),
       postComments: (context) => PostCommentsScreen(),
       memberManagement: (context) => MemberManagementScreen(),
-      subscriptionDetails: (context) => const SubscriptionDetailsScreen(),
+      subscriptionDetails: (context) => const SubscriptionDetailsScreen(title: '', imagePath: '',),
       completeSubscription: (context) => const CompleteSubscriptionScreen(),
-      productDetails: (context) => ProductDetailsScreen(),
+      productDetails: (context) => ProductDetailsScreen(title: '', imageUrl: '', price: '', fromAddsHub: true,),
       orderReview: (context) => OrderReviewScreen(),
       orderPayment: (context) => OrderPaymentScreen(),
       herSouq:
@@ -193,7 +193,7 @@ class AppRoutes {
       // Add more routes here
     };
   }
-*/
+
  static Route<dynamic>? onGenerateRoute(RouteSettings settings) {
     switch (settings.name) {
       case unAvailable:
