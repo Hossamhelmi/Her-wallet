@@ -37,8 +37,8 @@ class ParentingTipsTab extends StatelessWidget {
                   ),
                   SizedBox(height: 16.h),
                   ArticleCard(
-                    imagePath: 'assets/images/circle_cover1.jpg',
-                    title: context.localizations.howToDevelopEarlyReadingSkills,
+                    imagePath: 'assets/images/parentingTips2.png',
+                    title: 'Educational Games to Boost Your Child’s Intelligence',
                     description:
                         context.localizations.readAboutImportanceOfEarlyReading,
                   ),

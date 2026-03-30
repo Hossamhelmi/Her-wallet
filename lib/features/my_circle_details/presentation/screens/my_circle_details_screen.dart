@@ -4,10 +4,15 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../widgets/widgets.dart';
 
 class MyCircleDetailsScreen extends StatelessWidget {
-  const MyCircleDetailsScreen({super.key});
+  final String circleName;
+  final String imagePath;
+  final bool isOwner;
+  const MyCircleDetailsScreen({super.key, required this.circleName, required this.imagePath, required this.isOwner});
 
   @override
   Widget build(BuildContext context) {
+    
+
     return Scaffold(
       body: SafeArea(
         child: SingleChildScrollView(
@@ -17,10 +22,10 @@ class MyCircleDetailsScreen extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 CircleHeaderSection(
-                  circleName: context.localizations.animalsCircle,
+                  circleName: circleName,
                   memberCount: context.localizations.membersNumber,
-                  role: context.localizations.ownerRole,
-                  coverImagePath: 'assets/images/circle_cover1.jpg',
+                  role: isOwner ? context.localizations.ownerRole : context.localizations.memberRole,
+                  coverImagePath: imagePath,
                 ),
                 SizedBox(height: 8.h),
                 MyPostsSection(),

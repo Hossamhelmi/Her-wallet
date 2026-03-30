@@ -8,7 +8,9 @@ import 'package:her_wallet/features/subscription_details/core/constants/subscrip
 import 'package:her_wallet/features/subscription_details/presentation/widgets/widgets.dart';
 
 class SubscriptionDetailsScreen extends StatelessWidget {
-  const SubscriptionDetailsScreen({super.key});
+  final String title;
+  final String imagePath;
+  const SubscriptionDetailsScreen({super.key, required this.title, required this.imagePath});
 
   void _handleSubscription(context) {
     // Handle subscription action
@@ -22,7 +24,7 @@ class SubscriptionDetailsScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          data.productName,
+          title,
           style: TextStyle(
             fontSize: 18.sp,
             fontWeight: FontWeight.w600,
@@ -41,7 +43,7 @@ class SubscriptionDetailsScreen extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               SizedBox(height: 8.h),
-              ProductImageSection(imagePath: data.imagePath),
+              ProductImageSection(imagePath: imagePath),
               SizedBox(height: 8.h),
               ProductDescriptionText(description: data.description),
               SizedBox(height: 8.h),
@@ -78,4 +80,3 @@ class SubscriptionDetailsScreen extends StatelessWidget {
     );
   }
 }
-

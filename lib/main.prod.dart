@@ -55,6 +55,8 @@ class _MyAppState extends State<MyApp> {
         title: 'Her Wallet',
         theme: AppTheme.lightTheme,
         routes: AppRoutes.routes,
+        initialRoute: AppRoutes.splash,
+        onGenerateRoute: AppRoutes.onGenerateRoute,
         debugShowCheckedModeBanner: false,
         locale: _locale,
         localizationsDelegates: const [

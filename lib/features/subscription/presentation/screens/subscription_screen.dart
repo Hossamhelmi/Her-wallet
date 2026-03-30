@@ -25,7 +25,7 @@ class SubscriptionScreen extends StatelessWidget {
               Navigator.pushNamed(context, AppRoutes.subscriptionBoxes);
             },
           ),
-          const SubscriptionBoxCard(),
+          const SubscriptionBoxCard(coverImage: 'assets/images/box1.png',),
           SizedBox(height: 15.h),
           const ExploreBoxesSection(),
           SizedBox(height: 15.h),

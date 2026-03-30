@@ -22,7 +22,11 @@ class BabyHubContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        Navigator.pushNamed(context, AppRoutes.productDetails);
+        Navigator.pushNamed(context, AppRoutes.productDetails,
+            arguments: {
+              'title': title,
+              'imageUrl': iamgePath,
+            });
       },
       child: Container(
         height: 210.h,
@@ -50,7 +54,7 @@ class BabyHubContainer extends StatelessWidget {
                 child: Image.asset(
                   iamgePath,
                   width: MediaQuery.of(context).size.width * 7 / 16,
-                  fit: BoxFit.contain,
+                  fit: BoxFit.fill,
                 ),
               ),
             ),

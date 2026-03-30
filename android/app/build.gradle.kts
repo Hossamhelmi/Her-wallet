@@ -40,26 +40,26 @@ android {
             signingConfig = signingConfigs.getByName("debug")
         }
     }
-     flavorDimensions += "default"
-    productFlavors {
-        create("development") {
-            dimension = "default"
-            resValue(
-                type = "string",
-                name = "app_name",
-                value = "Her Wallet development")
+    // flavorDimensions += "default"
+    // productFlavors {
+    //     create("development") {
+    //         dimension = "default"
+    //         resValue(
+    //             type = "string",
+    //             name = "app_name",
+    //             value = "Her Wallet Cash")
+    //     }
+    //     create("production") {
+    //         dimension = "default"
+    //         resValue(
+    //             type = "string",
+    //             name = "app_name",
+    //             value = "Her Wallet production")
+    //     }
+    // }
         }
-        create("production") {
-            dimension = "default"
-            resValue(
-                type = "string",
-                name = "app_name",
-                value = "Her Wallet production")
-            applicationIdSuffix = ".production"
-
-        }
-    }
-}
+   //  }
+// }
 
 flutter {
     source = "../.."

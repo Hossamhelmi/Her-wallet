@@ -21,7 +21,7 @@ class FavoritesScreen extends StatelessWidget {
                 spacing: 8.w,
                 runSpacing: 8.h,
                 children: List.generate(
-                  6,
+                  1,
                   (index) => GestureDetector(
                     onTap: () {
                       Navigator.pushNamed(context, AppRoutes.productDetails);

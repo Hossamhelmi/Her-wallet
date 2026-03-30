@@ -1,5 +1,5 @@
 {
-  "appName": "Her Wallet",
+  "appName": "Her Wallet Cash",
   "welcome": "Welcome",
   "login": "Login",
   "signup": "Sign Up",
@@ -50,7 +50,7 @@
   "brideZone": "Bride Zone",
   "babyhub": "BabyHub",
   "womensBazar": "Women's Bazar",
-  "herSouq": "Her Souq",
+  "addsHub": "Adds Hub",
   "womenEmpowerment": "Women Empowerment",
   "subscribtionBox": "Subscription Box",
   "blog": "Blog",
@@ -464,7 +464,7 @@
   "frequentlyAskedQuestions": "Frequently Asked Questions",
   "transportation": "Transportation",
   "foodDelivery": "Food Delivery",
-  "rideHailing": "Ride Hailing",
+  "rideHailing": "Woman Ride Hailing",
   "transportationServices": "Transportations Services",
   "rideHailingTransportOptions": "Ride Hailing & Transport options",
   "bookYourRide": "Book Your Ride",
@@ -497,7 +497,7 @@
   "mothersDay": "Mother's day",
   "currentLanguage": "En",
   "reminder":"Reminder",
-  "reminderDescription":"Pay gym due date",
+  "reminderDescription":"gym/gas due date",
   "confirmCancellation": "Confirm Cancellation",
   "areYouSureCancelSubscription": "Are you sure you want to cancel your subscription? This will result in the following:",
   "cancelingAccumulatedPoints": "Canceling all accumulated points.",
@@ -553,18 +553,24 @@
   "bookNow":"Book Now",
   "beautyServices":"Fancy Beauty Services",
   "transportationServices": "Transportation Services",
-  "rideHailing": "Ride Hailing",
+  "rideHailing": "Woman Ride Hailing",
   "rideHailingTransportOptions": "Quick and reliable transportation options",
   "bookYourRide": "Book Your Ride",
-  "foodDelivery": "Food Delivery",
+  "foodDelivery": "Woman Food Delivery",
   "bookingConfirmedSuccessfully": "Booking Confirmed Successfully",
   "kidsStore":"Kids Store",
   "addedToCart":"Added To Cart",
   "continueShopping":"Continue Shopping",
   "goToCart":"Go To Cart",
   "addedToFavorites":"Added To Favourites",
-  "topRatedCaterers":"Top Rated Caterers"
-
+  "topRatedCaterers":"Top Rated Caterers",
+  "memberRole" : "member",
+  "stores" : "Stores",
+  "dresses" : "Dresses",
+  "topRatedVendors": "Top Rated Vendors",
+  "gym":"Gym",
+  "marketplace": "Market Place",
+  "confirmPayment" : "Confirm Payment"
 
 
 }

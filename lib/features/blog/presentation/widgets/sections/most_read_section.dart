@@ -18,14 +18,17 @@ class MostReadSection extends StatelessWidget {
       title: context.localizations.quickHealthyMeals,
       description: context.localizations.healthyMealsDescription,
     ),
+    /*
     BlogArticle(
       imagePath: 'assets/images/food.jpg',
       category: context.localizations.health,
       title: context.localizations.quickHealthyMeals,
       description: context.localizations.healthyMealsDescription,
     ),
+  */
   ];
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         SizedBox(height: 8.h),
         SectionHeader(

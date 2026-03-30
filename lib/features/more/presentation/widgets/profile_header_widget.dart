@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:her_wallet/core/extensions/localization_extension.dart';
-import 'package:her_wallet/core/routes/app_routes.dart';
 import 'package:her_wallet/features/new_circle/presentation/widgets/components/app_bar_extension.dart';
 
 class ProfileHeaderWidget extends StatelessWidget {
@@ -49,6 +47,7 @@ class ProfileHeaderWidget extends StatelessWidget {
           textAlign: TextAlign.center,
           overflow: TextOverflow.ellipsis,
         ),
+        /*
         ElevatedButton(
           onPressed: () {
             Navigator.pushNamed(context, AppRoutes.editProfile);
@@ -64,6 +63,7 @@ class ProfileHeaderWidget extends StatelessWidget {
             style: TextStyle(fontSize: 14.sp, fontWeight: FontWeight.w600),
           ),
         ),
+        */
         SizedBox(height: 4.h),
       ],
     );

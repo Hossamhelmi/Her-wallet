@@ -8,11 +8,13 @@ class DiscoverCircleCard extends StatelessWidget {
   final String name;
   final String membersCount;
   final IconData icon;
+  final Map<String, dynamic>? arguments; 
   const DiscoverCircleCard({
     super.key,
     required this.name,
     required this.membersCount,
     required this.icon,
+    required this.arguments,
   });
 
   @override
@@ -58,7 +60,8 @@ class DiscoverCircleCard extends StatelessWidget {
                 width: double.infinity,
                 child: ElevatedButton(
                   onPressed: () {
-                    Navigator.pushNamed(context, AppRoutes.myCircleDetails);
+                    Navigator.pushNamed(context, AppRoutes.myCircleDetails,
+                        arguments: arguments);
                   },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: AppColors.mainColor,

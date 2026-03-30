@@ -62,7 +62,8 @@ import 'app_localizations_en.dart';
 /// be consistent with the languages listed in the AppLocalizations.supportedLocales
 /// property.
 abstract class AppLocalizations {
-  AppLocalizations(String locale) : localeName = intl.Intl.canonicalizedLocale(locale.toString());
+  AppLocalizations(String locale)
+    : localeName = intl.Intl.canonicalizedLocale(locale.toString());
 
   final String localeName;
 
@@ -70,7 +71,8 @@ abstract class AppLocalizations {
     return Localizations.of<AppLocalizations>(context, AppLocalizations);
   }
 
-  static const LocalizationsDelegate<AppLocalizations> delegate = _AppLocalizationsDelegate();
+  static const LocalizationsDelegate<AppLocalizations> delegate =
+      _AppLocalizationsDelegate();
 
   /// A list of this localizations delegate along with the default localizations
   /// delegates.
@@ -82,23 +84,24 @@ abstract class AppLocalizations {
   /// Additional delegates can be added by appending to this list in
   /// MaterialApp. This list does not have to be used at all if a custom list
   /// of delegates is preferred or required.
-  static const List<LocalizationsDelegate<dynamic>> localizationsDelegates = <LocalizationsDelegate<dynamic>>[
-    delegate,
-    GlobalMaterialLocalizations.delegate,
-    GlobalCupertinoLocalizations.delegate,
-    GlobalWidgetsLocalizations.delegate,
-  ];
+  static const List<LocalizationsDelegate<dynamic>> localizationsDelegates =
+      <LocalizationsDelegate<dynamic>>[
+        delegate,
+        GlobalMaterialLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+      ];
 
   /// A list of this localizations delegate's supported locales.
   static const List<Locale> supportedLocales = <Locale>[
     Locale('ar'),
-    Locale('en')
+    Locale('en'),
   ];
 
   /// No description provided for @appName.
   ///
   /// In en, this message translates to:
-  /// **'Her Wallet'**
+  /// **'Her Wallet Cash'**
   String get appName;
 
   /// No description provided for @welcome.
@@ -401,11 +404,11 @@ abstract class AppLocalizations {
   /// **'Women\'s Bazar'**
   String get womensBazar;
 
-  /// No description provided for @herSouq.
+  /// No description provided for @addsHub.
   ///
   /// In en, this message translates to:
-  /// **'Her Souq'**
-  String get herSouq;
+  /// **'Adds Hub'**
+  String get addsHub;
 
   /// No description provided for @womenEmpowerment.
   ///
@@ -2882,13 +2885,13 @@ abstract class AppLocalizations {
   /// No description provided for @foodDelivery.
   ///
   /// In en, this message translates to:
-  /// **'Food Delivery'**
+  /// **'Woman Food Delivery'**
   String get foodDelivery;
 
   /// No description provided for @rideHailing.
   ///
   /// In en, this message translates to:
-  /// **'Ride Hailing'**
+  /// **'Woman Ride Hailing'**
   String get rideHailing;
 
   /// No description provided for @transportationServices.
@@ -3086,7 +3089,7 @@ abstract class AppLocalizations {
   /// No description provided for @reminderDescription.
   ///
   /// In en, this message translates to:
-  /// **'Pay gym due date'**
+  /// **'gym/gas due date'**
   String get reminderDescription;
 
   /// No description provided for @confirmCancellation.
@@ -3394,9 +3397,52 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Top Rated Caterers'**
   String get topRatedCaterers;
+
+  /// No description provided for @memberRole.
+  ///
+  /// In en, this message translates to:
+  /// **'member'**
+  String get memberRole;
+
+  /// No description provided for @stores.
+  ///
+  /// In en, this message translates to:
+  /// **'Stores'**
+  String get stores;
+
+  /// No description provided for @dresses.
+  ///
+  /// In en, this message translates to:
+  /// **'Dresses'**
+  String get dresses;
+
+  /// No description provided for @topRatedVendors.
+  ///
+  /// In en, this message translates to:
+  /// **'Top Rated Vendors'**
+  String get topRatedVendors;
+
+  /// No description provided for @gym.
+  ///
+  /// In en, this message translates to:
+  /// **'Gym'**
+  String get gym;
+
+  /// No description provided for @marketplace.
+  ///
+  /// In en, this message translates to:
+  /// **'Market Place'**
+  String get marketplace;
+
+  /// No description provided for @confirmPayment.
+  ///
+  /// In en, this message translates to:
+  /// **'Confirm Payment'**
+  String get confirmPayment;
 }
 
-class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {
+class _AppLocalizationsDelegate
+    extends LocalizationsDelegate<AppLocalizations> {
   const _AppLocalizationsDelegate();
 
   @override
@@ -3405,25 +3451,26 @@ class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> 
   }
 
   @override
-  bool isSupported(Locale locale) => <String>['ar', 'en'].contains(locale.languageCode);
+  bool isSupported(Locale locale) =>
+      <String>['ar', 'en'].contains(locale.languageCode);
 
   @override
   bool shouldReload(_AppLocalizationsDelegate old) => false;
 }
 
 AppLocalizations lookupAppLocalizations(Locale locale) {
-
-
   // Lookup logic when only language code is specified.
   switch (locale.languageCode) {
-    case 'ar': return AppLocalizationsAr();
-    case 'en': return AppLocalizationsEn();
+    case 'ar':
+      return AppLocalizationsAr();
+    case 'en':
+      return AppLocalizationsEn();
   }
 
   throw FlutterError(
     'AppLocalizations.delegate failed to load unsupported locale "$locale". This is likely '
     'an issue with the localizations generation tool. Please file an issue '
     'on GitHub with a reproducible sample app and the gen-l10n configuration '
-    'that was used.'
+    'that was used.',
   );
 }

@@ -65,7 +65,7 @@
   "brideZone": "منطقة العروس",
   "babyhub": "مركز الطفل",
   "womensBazar": "بازار النساء",
-  "herSouq": "سوقها",
+  "addsHub": "سوقها",
   "womenEmpowerment": "تمكين المرأة",
   "subscribtionBox": "صندوق الاشتراك",
   "blog": "المدونة",
@@ -514,7 +514,7 @@
   "arabic":"العربية",
   "english":"الانجليزية",
   "reminder":"تذكير",
-  "reminderDescription":"موعد اشتراك الجيم الشهرى",
+  "reminderDescription":"موعد اشتراك الجيم/الفاز الشهرى",
   "skip":"تخطى",
   "rating":"التقييم",
   "description":"التفاصيل",
@@ -567,6 +567,15 @@
   "continueShopping":"الاستمرار فى التسوق",
   "goToCart":"اذهبى الى العربة",
   "addedToFavorites":"تمت الاضافة الى المفضلة",
-  "topRatedCaterers" : "افضل مقدمى الطعام"
+  "topRatedCaterers" : "افضل مقدمى الطعام",
+  "memberRole" : "عضو",
+  "stores" : "المتاجر",
+  "dresses" : "الفساتين",
+  "topRatedVendors": "المتاجر الاعلى تقييم",
+  "gym" : "الجيم",
+  "marketplace": "المتجر",
+  "confirmPayment" : "تأكيد الدفع"
+
+
 
 }

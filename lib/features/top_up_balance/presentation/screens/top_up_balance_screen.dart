@@ -4,7 +4,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:her_wallet/core/constants/app_colors.dart';
 import 'package:her_wallet/core/routes/app_routes.dart';
 import '../widgets/balance_display_section.dart';
-import '../widgets/payment_method_section.dart';
 import '../widgets/amount_input_section.dart';
 import '../../../../core/shared/widgets/radio_selection_section.dart';
 import '../widgets/recent_topups_section.dart';
@@ -12,14 +11,15 @@ import '../../../home/presentation/widgets/buttons/top_up_button.dart';
 import '../../../home/presentation/widgets/common/security_info.dart';
 
 class TopUpBalanceScreen extends StatefulWidget {
-  const TopUpBalanceScreen({super.key});
+  final bool isSendMoney;
+  const TopUpBalanceScreen({super.key, required this.isSendMoney});
 
   @override
   State<TopUpBalanceScreen> createState() => _TopUpBalanceScreenState();
 }
 
 class _TopUpBalanceScreenState extends State<TopUpBalanceScreen> {
-  String _selectedMethod = 'bank_card';
+  // String _selectedMethod = 'bank_card';
   int? _selectedAmount;
   final TextEditingController _amountController = TextEditingController();
   final List<int> _predefinedAmounts = [100, 150, 200, 250, 500, 1000];
@@ -29,12 +29,12 @@ class _TopUpBalanceScreenState extends State<TopUpBalanceScreen> {
     _amountController.dispose();
     super.dispose();
   }
-
+/* 
   void _onMethodSelected(String method) {
     setState(() {
       _selectedMethod = method;
     });
-  }
+  } */
 
   void _onAmountSelected(amount) {
     setState(() {
@@ -53,6 +53,10 @@ class _TopUpBalanceScreenState extends State<TopUpBalanceScreen> {
 
   @override
   Widget build(BuildContext context) {
+  //  final args = ModalRoute.of(context)!.settings.arguments as Map<String, dynamic>;
+
+  //  final bool isSendMoney = args['isSendMoney'];
+
     return Scaffold(
       appBar: AppBar(
         backgroundColor: AppColors.appBar,
@@ -69,7 +73,7 @@ class _TopUpBalanceScreenState extends State<TopUpBalanceScreen> {
           ),
         ),
         title: Text(
-          context.localizations.topUpYourBalance,
+          widget.isSendMoney ? context.localizations.sendMoney : context.localizations.topUpYourBalance,
           style: TextStyle(
             fontSize: 16.sp,
             fontWeight: FontWeight.w600,
@@ -83,10 +87,12 @@ class _TopUpBalanceScreenState extends State<TopUpBalanceScreen> {
           children: [
             const BalanceDisplaySection(),
             SizedBox(height: 4.h),
+            /*
             PaymentMethodSection(
               selectedMethod: _selectedMethod,
               onMethodSelected: _onMethodSelected,
             ),
+            */
             AmountInputSection(
               controller: _amountController,
               onChanged: _onTextChanged,
@@ -100,7 +106,8 @@ class _TopUpBalanceScreenState extends State<TopUpBalanceScreen> {
             ),
             SizedBox(height: 8.h),
             TopUpButton(
-              buttonText: context.localizations.topUpNow,
+
+              buttonText: widget.isSendMoney ? context.localizations.sendMoney : context.localizations.topUpNow,
               onPressed: () {
                 // Handle top-up action here
                 Navigator.pushNamed(

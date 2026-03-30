@@ -35,7 +35,7 @@ class QuickAccessSection extends StatelessWidget {
     {
       'imagePath': 'quickAccess4.png',
       'color': AppColors.orangeIcon,
-      'title': context.localizations.herSouq,
+      'title': context.localizations.addsHub,
       'routeName': AppRoutes.herSouq,
     },
     {

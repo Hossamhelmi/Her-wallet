@@ -17,6 +17,7 @@ class LatestArticlesSection extends StatelessWidget {
       title: context.localizations.skinCareRoutine,
       description: context.localizations.skinCareTips,
     ),
+    /*
     BlogArticle(
       imagePath: 'assets/images/skinCareRoutine.jpg',
       category: context.localizations.beauty,
@@ -35,8 +36,10 @@ class LatestArticlesSection extends StatelessWidget {
       title: context.localizations.skinCareRoutine,
       description: context.localizations.skinCareTips,
     ),
+    */
   ];
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         SectionHeader(
           title: context.localizations.latestArticles,

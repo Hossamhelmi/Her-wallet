@@ -66,57 +66,86 @@ class MyCirclesSection extends StatelessWidget {
           Expanded(
             child: ListView(
               children: [
-                
                 GestureDetector(
                   child: MyCircleCard(
                     name: context.localizations.skinCare,
-                      membersCount: context.localizations.membersNumber,
-                      icon: Icons.face,
-                    ),
-                    onTap: () {
-                      Navigator.pushNamed(context, AppRoutes.myCircleDetails);
-                    },
+                    membersCount: context.localizations.membersNumber,
+                    icon: Icons.face,
                   ),
+                  onTap: () {
+                    Navigator.pushNamed(
+                      context,
+                      AppRoutes.myCircleDetails,
+                      arguments: {
+                        'circleName': context.localizations.skinCare,
+                        'imagePath': 'assets/images/skincare.jpg',
+                        'isOwner': true,
+                      },
+                    );
+                  },
+                ),
                 SizedBox(height: 8.h),
                 GestureDetector(
                   child: MyCircleCard(
                     name: context.localizations.babyCare,
-                      membersCount: context.localizations.membersNumber,
-                      icon: Icons.fitness_center,
-                    ),
-                    onTap: () {
-                      Navigator.pushNamed(context, AppRoutes.myCircleDetails);
-                    },
+                    membersCount: context.localizations.membersNumber,
+                    icon: Icons.fitness_center,
                   ),
+                  onTap: () {
+                    Navigator.pushNamed(
+                      context,
+                      AppRoutes.myCircleDetails,
+                      arguments: {
+                        'circleName': context.localizations.babyCare,
+                        'imagePath': 'assets/images/babyCare.jpg',
+                        'isOwner': true,
+                      },
+                    );
+                  },
+                ),
                 SizedBox(height: 8.h),
                 GestureDetector(
                   child: MyCircleCard(
                     name: context.localizations.brideZone,
-                      membersCount: context.localizations.membersNumber,
-                      icon: Icons.self_improvement,
-                    ),
-                    onTap: () {
-                      Navigator.pushNamed(context, AppRoutes.myCircleDetails);
-                    },
+                    membersCount: context.localizations.membersNumber,
+                    icon: Icons.self_improvement,
                   ),
+                  onTap: () {
+                    Navigator.pushNamed(
+                      context,
+                      AppRoutes.myCircleDetails,
+                      arguments: {
+                        'circleName': context.localizations.brideZone,
+                        'imagePath': 'assets/images/beauty-salons.jpg',
+                        'isOwner': true,
+                      },
+                    );
+                  },
+                ),
                 SizedBox(height: 8.h),
                 GestureDetector(
                   child: MyCircleCard(
                     name: context.localizations.womenEmpowerment,
-                      membersCount: context.localizations.membersNumber,
-                      icon: Icons.woman,
-                    ),
-                    onTap: () {
-                      Navigator.pushNamed(context, AppRoutes.myCircleDetails);
-                    },
+                    membersCount: context.localizations.membersNumber,
+                    icon: Icons.woman,
                   ),
-                ],
-              ),
+                  onTap: () {
+                    Navigator.pushNamed(
+                      context,
+                      AppRoutes.myCircleDetails,
+                      arguments: {
+                        'circleName': context.localizations.womenEmpowerment,
+                        'imagePath': 'assets/images/woman.jpg',
+                        'isOwner': true,
+                      },
+                    );
+                  },
+                ),
+              ],
             ),
-    
+          ),
         ],
       ),
     );
   }
 }
-
